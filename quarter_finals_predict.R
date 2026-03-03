@@ -1,4 +1,4 @@
-path <- '/Users/duda/Documents/World_Cup/'
+path <- './'
 
 # Getting the model 
 model_sim <- readRDS(paste0(path,'final_model'))

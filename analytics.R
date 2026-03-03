@@ -1,30 +1,50 @@
-path <- '/Users/duda/Documents/World_Cup/'
+path <- './'
+
+library(dplyr)
 
 all_teams <- read.csv(paste0(path,'qualified_teams.csv'))
-teams_in_round_of_16 <- read.csv(paste0(path,'classification_round_16.csv'))
+teams_in_round_of_32 <- read.csv(paste0(path,'classification_round_32.csv'))
+teams_in_round_of_16 <- read.csv(paste0(path,'matches_round_of_16.csv'))
 teams_in_quarter <- read.csv(paste0(path,'quarter_matches.csv'))
 teams_in_semi <- read.csv(paste0(path,'matches_semi.csv'))
 teams_in_final <- read.csv(paste0(path,'final_matches.csv'))
 champions <- read.csv(paste0(path,'champions.csv'))
   
-cols <- c('team', 'round_16','quarter','semi','final','champion') 
+cols <- c('team', 'round_32', 'round_16','quarter','semi','final','champion')
 
 df_teams_analytics <- data.frame(matrix(0,
-                                      nrow = 32,                        
+                                      nrow = 48,
                                       ncol = length(cols))) 
 names(df_teams_analytics) <- cols
 df_teams_analytics$team <- all_teams$country
 
 
-n_teams <- 32
+n_teams <- 48
 
-n_simulations <- max(teams_in_round_of_16$simulation)
+n_simulations <- max(teams_in_round_of_32$simulation)
+
+# Round of 32
+for(j in 1:n_simulations){
+
+  working_df <- teams_in_round_of_32 %>% filter(simulation == j)
+  teams_in_round <- unique(working_df$country)
+
+  for(i in 1:n_teams){
+
+    team_selected <- df_teams_analytics[i,]$team
+    if(team_selected %in% teams_in_round){
+      df_teams_analytics[i,]$round_32 <- df_teams_analytics[i,]$round_32 + 1
+    }
+
+  }
+
+}
 
 
 for(j in 1:n_simulations){
   
   working_df <- teams_in_round_of_16 %>% filter(simulation == j)
-  teams_in_round <- unique(working_df$country)
+  teams_in_round <- unique(c(working_df$team, working_df$opp_team))
   
   for(i in 1:n_teams){
     
@@ -112,7 +132,7 @@ for(j in 1:n_simulations){
 df_teams_analytics_prop <- cbind(df_teams_analytics$team,
                                  df_teams_analytics[,-1]/n_simulations)
 
-ordered_df <- df_teams_analytics_prop %>% arrange(-round_16)
+ordered_df <- df_teams_analytics_prop %>% arrange(-round_32)
 
 write.csv(ordered_df,paste0(path,'ordered_df.csv'),row.names = FALSE)
 

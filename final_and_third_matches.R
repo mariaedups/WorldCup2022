@@ -1,4 +1,4 @@
-path <- '/Users/duda/Documents/World_Cup/'
+path <- './'
 
 # Getting the round of 16 match predictions
 match_predictions <- read.csv(paste0(path,'semi_final_match_predictions.csv'))

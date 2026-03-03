@@ -1,4 +1,4 @@
-path <- '/Users/duda/Documents/World_Cup/'
+path <- './'
 
 match_predictions <- read.csv(paste0(path,'final_and_third_match_predictions.csv'))
 
@@ -11,7 +11,7 @@ for(i in 1:nrow(match_predictions)){
   
   if(match_predictions$predictions_sim[i] > match_predictions$pred_for_opp_team[i]) {
     
-    if(match_predictions$stage_num[i] == 6){
+    if(match_predictions$stage_num[i] == 7){
       match_predictions[i,]$winner <- match_predictions$team[i]
       match_predictions[i,]$second_place <- match_predictions$opp_team[i]
     } else {
@@ -23,7 +23,7 @@ for(i in 1:nrow(match_predictions)){
   
   if(match_predictions$predictions_sim[i] < match_predictions$pred_for_opp_team[i]){ 
     
-    if(match_predictions$stage_num[i] == 6){
+    if(match_predictions$stage_num[i] == 7){
       match_predictions[i,]$winner <- match_predictions$opp_team[i]
       match_predictions[i,]$second_place <- match_predictions$team[i]
     } else {
@@ -36,7 +36,7 @@ for(i in 1:nrow(match_predictions)){
   if(match_predictions$predictions_sim[i] == match_predictions$pred_for_opp_team[i]){
     randomize <- runif(n=1,min=0,max=1) > 0.5
     
-    if(match_predictions$stage_num[i] == 6){
+    if(match_predictions$stage_num[i] == 7){
       match_predictions[i,]$winner <- ifelse(randomize > 0.5, match_predictions$team[i], match_predictions$opp_team[i])
       match_predictions[i,]$second_place <- ifelse(randomize < 0.5, match_predictions$team[i], match_predictions$opp_team[i])
     } else {
@@ -62,5 +62,5 @@ ranking <- data.frame(simulation,winners,second_places,third_places,fourth_place
 write.csv(ranking,paste0(path,'ranking.csv'),row.names = FALSE)
 
 # Champions dataframe 
-champions <- match_predictions %>% filter(stage_num == 6) %>% dplyr::select(simulation,winner)
-write.csv(champions,paste0(path,'champions'),row.names = FALSE)
+champions <- match_predictions %>% filter(stage_num == 7) %>% dplyr::select(simulation,winner)
+write.csv(champions,paste0(path,'champions.csv'),row.names = FALSE)

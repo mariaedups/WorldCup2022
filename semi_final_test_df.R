@@ -1,12 +1,12 @@
-path <- '/Users/duda/Documents/World_Cup/'
+path <- './'
 
 semi_matches <- read.csv(paste0(path,'matches_semi.csv'))
-stage_num_selected <- 4
+stage_num_selected <- 5
 elo_2021 <- read_csv(paste0(path,'elo_2021.csv'))
-country_continent <- read_csv(paste0(path,'/raw_data/country_continent.csv'))
+country_continent <- read.csv(paste0(path,'fifa_rankings_2021.csv')) %>% select(country, continent)
 
 # Get Host continent
-host_continent <- 'Asia'
+host_continent <- 'North America'
 
 # Duplicate each match so that we have one line for team + opp_team and another line for opp_team + team 
 
@@ -45,7 +45,7 @@ merge_elo_all <- merge(merge_elo_team,elo_2021,by.x = 'opp_team',by.y ='country_
 
 # Organize in a df exactly like the train data that goes into the model 
 
-df_clean_semi <- merge_elo_all %>% mutate(year = Year.x,
+df_clean_semi <- merge_elo_all %>% mutate(year = 2026,
                                                     diff_elo = elo_score.x - elo_score.y,
                                                     avg_goals_scored = goals_for.x/num_matches.x,
                                                     avg_opp_goals_taken = goals_against.y/num_matches.y,

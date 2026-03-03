@@ -1,7 +1,7 @@
-path <- '/Users/duda/Documents/World_Cup/'
+path <- './'
 
 source(paste0(path,'clean_elo.R'))
-elo_raw <- read_csv(paste0(path,'raw_data/elo_rankings_raw_year_bf.csv'))
+elo_raw <- read_csv(paste0(path,'elo_rankings_raw_year_bf.csv'))
 
 # Get Elo scores
 elo_df <- clean_elo(elo_raw)

@@ -1,8 +1,12 @@
-path <- '/Users/duda/Documents/World_Cup/'
+library(dplyr)
+
+path <- './'
 
 # We need group_df and winner_pred_df
 group_df <- read.csv(paste0(path,'group_df.csv'))
 winner_pred_df <- read.csv(paste0(path,'winner_pred_df.csv'))
+
+n_simulations <- max(group_df$simulation)
 
 # With preds_df winner and loser, calculate team points 
 # Win is worth 3 points, draw is worth 1 point, loss is worth 0 points
@@ -174,6 +178,24 @@ if(nrow(candidates_left_final_check) != 0) {
 
 # Stop this .R code maybe here and start a new one for the following phases
 
-# Check dim - this final df should have 16*n_simulation lines! Which are the 16 countries in each simulation that are going to the next round
+# Get the 8 best 3rd placed teams
+third_places <- team_df %>% arrange(simulation,group,-points) %>% group_by(simulation,group) %>%
+  mutate(rank = min_rank(-points)) %>%
+  mutate(diff_goals = goals_scored - goals_taken) %>%
+  filter(rank == 3 | (rank > 3 & row_number() == 3)) # Ensure we get 3rd place even if ties
 
-write.csv(df_clean_final,paste0(path,'classification_round_16.csv'),row.names = FALSE)
+# Select the top 8 3rd placed teams across all groups for each simulation
+best_third_places <- third_places %>%
+  group_by(simulation) %>%
+  arrange(simulation, -points, -diff_goals, -goals_scored) %>%
+  slice_head(n = 8) %>%
+  mutate(rank = 3) %>%
+  dplyr::select(country,simulation,group,points,goals_scored,goals_taken,diff_goals,rank)
+
+df_clean_final_32 <- rbind(df_clean_final, best_third_places) %>% arrange(simulation, group, rank)
+
+# Stop this .R code maybe here and start a new one for the following phases
+
+# Check dim - this final df should have 32*n_simulation lines! Which are the 32 countries in each simulation that are going to the next round
+
+write.csv(df_clean_final_32,paste0(path,'classification_round_32.csv'),row.names = FALSE)

@@ -1,10 +1,10 @@
 # Path 
-path = '/Users/duda/Documents/World_Cup/'
+path = './'
 
 # Import the trained model that used World Cups 1960 - 2018 (trained in the R file: model_with_2018.R)
 # source('model_with_2018.R')
-model_sim <- readRDS(paste0(path,'final_model'))
-summary(model_sim)
+# model_sim <- readRDS(paste0(path,'final_model'))
+# summary(model_sim)
 
 # Clean Elo data that will be used in the test sets (generates 'elo_2021.csv')
 source(paste0(path,'elo_2021.R'))
@@ -37,9 +37,30 @@ dim(winner_pred_df)
 max(as.numeric(winner_pred_df$simulation))
 
 # [RANKING] Use the match prediction to calculate group points and define winner and runner up of each group
-# generates df_clean_final and saves in the csv classification_round_16.csv
-source(paste0(path,'classification_round_16.R'))
-head(df_clean_final)
+# generates df_clean_final_32 and saves in the csv classification_round_32.csv
+source(paste0(path,'classification_round_32.R'))
+head(df_clean_final_32)
+
+# [GET MATCHES] Get round 32 matches for each simulation
+# generates df_matches_final and saves the csv matches_round_of_32.csv
+source(paste0(path,'round_of_32_matches.R'))
+head(df_matches_final)
+dim(df_matches_final)
+max(as.numeric(df_matches_final$simulation))
+
+# [ORGANIZE TEST DF] Merge round 32 matches with data from each team
+# generates df_clean_round_32 and saves the csv df_test_round_32.csv
+source(paste0(path,'round_of_32_test_df.R'))
+head(df_clean_round_32)
+dim(df_clean_round_32)
+max(as.numeric(df_clean_round_32$simulation))
+
+# [MODEL] Use results to predict the result of the matches
+# generates winner_pred_df and saves the csv round_32_match_predictions.csv
+source(paste0(path,'round_of_32_predict.R'))
+head(winner_pred_df_round_of_32)
+dim(winner_pred_df_round_of_32)
+max(as.numeric(winner_pred_df_round_of_32$simulation))
 
 # [GET MATCHES] Get round 16 matches for each simulation 
 # generates df_matches_final and saves the csv matches_round_of_16.csv
