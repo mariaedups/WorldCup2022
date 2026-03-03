@@ -1,0 +1,25 @@
+#!/bin/bash
+Rscript update_data.R
+Rscript elo_2021.R
+Rscript qualifiers.R
+Rscript soccer_shuffling_groups_v2.R
+Rscript group_matches.R
+Rscript group_match_predictions.R
+Rscript classification_round_32.R
+Rscript round_of_32_matches.R
+Rscript round_of_32_test_df.R
+Rscript round_of_32_predict.R
+Rscript round_of_16_matches.R
+Rscript round_of_16_test_df.R
+Rscript round_of_16_predict.R
+Rscript quarter_final_matches.R
+Rscript quarter_finals_test_df.R
+Rscript quarter_finals_predict.R
+Rscript semi_final_matches.R
+Rscript semi_final_test_df.R
+Rscript semi_final_predict.R
+Rscript final_and_third_matches.R
+Rscript final_and_third_test_df.R
+Rscript final_and_third_predict.R
+Rscript ranking.R
+Rscript analytics.R
