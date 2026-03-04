@@ -1,0 +1,65 @@
+"country","simulation","group","points","goals_scored","goals_taken","diff_goals","rank"
+"Ecuador",1,1,6,5,2,3,1
+"United States",1,1,4,6,5,1,2
+"Nigeria",1,1,4,4,3,1,3
+"Austria",1,2,5,3,2,1,1
+"Uzbekistan",1,2,5,1,0,1,2
+"Egypt",1,2,4,2,1,1,3
+"South Africa",1,3,9,5,2,3,1
+"Netherlands",1,3,4,3,3,0,2
+"Canada",1,3,3,2,3,-1,3
+"Tunisia",1,4,5,4,3,1,1
+"Jamaica",1,4,4,5,4,1,2
+"Argentina",1,4,3,3,3,0,3
+"Norway",1,5,9,6,1,5,1
+"Portugal",1,5,4,2,3,-1,2
+"Croatia",1,5,4,1,2,-1,3
+"Saudi Arabia",1,6,7,7,2,5,1
+"Morocco",1,6,7,6,2,4,2
+"Iran",1,7,7,6,3,3,1
+"Panama",1,7,6,5,3,2,2
+"Brazil",1,7,3,5,6,-1,3
+"Chile",1,8,6,2,5,-3,1
+"Jordan",1,8,4,3,1,2,2
+"Spain",1,8,4,1,1,0,3
+"Italy",1,9,7,3,1,2,1
+"Paraguay",1,9,6,3,2,1,2
+"Colombia",1,10,5,5,4,1,1
+"Cameroon",1,10,5,4,3,1,2
+"New Zealand",1,11,7,4,2,2,1
+"Algeria",1,11,5,4,2,2,2
+"Germany",1,11,4,2,2,0,3
+"Haiti",1,12,9,7,2,5,1
+"Senegal",1,12,4,5,3,2,2
+"New Zealand",2,1,7,5,3,2,1
+"Egypt",2,1,6,4,3,1,2
+"Uzbekistan",2,2,9,6,2,4,1
+"Nigeria",2,2,6,3,2,1,2
+"Japan",2,3,6,3,1,2,1
+"Canada",2,3,6,4,3,1,2
+"Brazil",2,4,6,4,2,2,1
+"Croatia",2,4,6,3,5,-2,2
+"Morocco",2,4,3,7,6,1,3
+"Scotland",2,5,6,3,3,0,1
+"Saudi Arabia",2,5,4,3,3,0,2
+"Tunisia",2,5,4,3,4,-1,3
+"Panama",2,6,5,3,2,1,1
+"Poland",2,6,4,4,4,0,2
+"Iran",2,6,4,3,3,0,3
+"Costa Rica",2,7,9,8,1,7,1
+"Colombia",2,7,6,3,3,0,2
+"Cameroon",2,8,6,5,1,4,1
+"Paraguay",2,8,5,3,2,1,2
+"France",2,8,4,4,6,-2,3
+"Algeria",2,9,6,3,2,1,1
+"Germany",2,9,4,3,3,0,2
+"Germany",2,9,4,3,3,0,3
+"Ecuador",2,10,5,1,0,1,1
+"England",2,10,4,4,1,3,2
+"Jamaica",2,10,4,4,4,0,3
+"Australia",2,11,6,6,3,3,1
+"Wales",2,11,6,5,4,1,2
+"Ghana",2,11,6,3,2,1,3
+"Qatar",2,12,7,9,3,6,1
+"Senegal",2,12,6,6,5,1,2
+"Norway",2,12,4,5,5,0,3

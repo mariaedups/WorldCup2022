@@ -1,10 +1,12 @@
+library(dplyr)
+
 path <- './'
 
 matches_round_32 <- read.csv(paste0(path,'matches_round_of_32.csv'))
 elo_2021 <- read.csv(paste0(path,'elo_2021.csv'))
 
 # Use fifa_rankings_2021.csv to get continents instead of raw_data/country_continent.csv
-country_continent <- read.csv(paste0(path,'fifa_rankings_2021.csv')) %>% select(country, continent)
+country_continent <- read.csv(paste0(path,'../fifa_rankings_2021.csv')) %>% select(country, continent)
 
 stage_num_selected <- 2
 
@@ -60,6 +62,6 @@ df_clean_round_32 <- merge_elo_all %>% mutate(year = 2026,
                                             TRUE ~ 0)) %>%
   dplyr::select('team','opp_team','stage_num','year','simulation',
                 'diff_elo','avg_goals_scored','avg_opp_goals_taken','team_has_home_advt',
-                'group_team','group_opp_team','match_num')
+                'group_team','group_opp_team','rank_team','rank_opp','match_num')
 
 write.csv(df_clean_round_32,paste0(path,'df_test_round_32.csv'),row.names = FALSE)

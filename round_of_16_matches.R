@@ -1,12 +1,22 @@
-path <- './'
+path <- '/Users/duda/Documents/World_Cup/'
 
-library(dplyr)
+countries_on_round_16 <- read.csv(paste0(path,'classification_round_16.csv'))
 
-round_32_preds <- read.csv(paste0(path,'round_32_match_predictions.csv'))
+# Rank 1 is top, rank 2 is runner up
 
-# Now Round 16 comes from Round of 32 winners
-# Winner of Match 1 plays Winner of Match 2, etc.
+# Having the teams going to the next ground, make a table filled with the round of 16 matches
 
+# Group 1 winner plays group 2 runner up (1,4)
+# Group 3 winner plays group 4 runner up (5,8)
+# Group 5 winner plays group 6 runner up (9,12)
+# Group 7 winner plays group 8 runner up (13,16)
+#
+# Group 1 runner up plays group 2 winner (2,3)
+# Group 3 runner up plays group 4 winner (6,7)
+# Group 5 runner up plays group 6 winner (10,11)
+# Group 7 runner up plays group 8 winner (14,15)
+
+# Organize which matches are going to happen in the group phase 12x8 (96 matches)
 cols <- c('team', 'group_team','rank_team', 'opp_team','group_opp_team','rank_opp','match_num','simulation') 
 
 df_matches <- data.frame(matrix(NA,
@@ -20,28 +30,23 @@ df_matches_final <- data.frame(matrix(NA,
 names(df_matches_final) <- cols
 
 n_matches <- 8 
-n_simulations <- max(round_32_preds$simulation)
+seq_first_teams <- c(seq(1,13,4),seq(2,14,4))
+seq_second_teams <- c(seq(4,16,4),seq(3,15,4))
+n_simulations <- max(countries_on_round_16$simulation)
 
 for(j in 1:n_simulations) {
 
-  # Filter round of 32 results for winners in this simulation
-  # Find who scored more goals in each match
-  matches_simulation <- round_32_preds %>% filter(simulation == j) %>%
-    mutate(winner = ifelse(predictions_sim > pred_for_opp_team, team, opp_team),
-           winner_group = ifelse(predictions_sim > pred_for_opp_team, group_team, group_opp_team),
-           winner_rank = ifelse(predictions_sim > pred_for_opp_team, rank_team, rank_opp)) %>%
-    # Remove duplicates because we have 2 rows per match
-    distinct(match_num, winner, .keep_all = TRUE) %>% arrange(match_num)
+  matches_simulation <- countries_on_round_16 %>% arrange(simulation,group,rank) %>% filter(simulation == j)
 
   for(i in 1:n_matches){
   
-    df_matches[i,]$team <- matches_simulation[2*i - 1,]$winner
-    df_matches[i,]$group_team <- matches_simulation[2*i - 1,]$winner_group
-    df_matches[i,]$rank_team <- matches_simulation[2*i - 1,]$winner_rank
+    df_matches[i,]$team <- matches_simulation[seq_first_teams[i],]$country
+    df_matches[i,]$group_team <- matches_simulation[seq_first_teams[i],]$group
+    df_matches[i,]$rank_team <- matches_simulation[seq_first_teams[i],]$rank
     
-    df_matches[i,]$opp_team <- matches_simulation[2*i,]$winner
-    df_matches[i,]$group_opp_team <- matches_simulation[2*i,]$winner_group
-    df_matches[i,]$rank_opp <- matches_simulation[2*i,]$winner_rank
+    df_matches[i,]$opp_team <- matches_simulation[seq_second_teams[i],]$country
+    df_matches[i,]$group_opp_team <- matches_simulation[seq_second_teams[i],]$group
+    df_matches[i,]$rank_opp <- matches_simulation[seq_second_teams[i],]$rank
     
     df_matches[i,]$match_num <- i
     df_matches[i,]$simulation <- j

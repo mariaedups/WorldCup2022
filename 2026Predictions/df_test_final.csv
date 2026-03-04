@@ -1,0 +1,5 @@
+"team","opp_team","stage_num","year","simulation","diff_elo","avg_goals_scored","avg_opp_goals_taken","team_has_home_advt","group_team","group_opp_team","match_num_final"
+"Uzbekistan","Iran",7,2026,1,-213,1.7248322147651,0.785597381342062,0,"2","5","1"
+"Iran","Uzbekistan",7,2026,1,213,1.87234042553191,1.16778523489933,0,"5","2","1"
+"Panama","Colombia",7,2026,2,-361,1.17716535433071,1.18900343642612,1,"6","2","1"
+"Colombia","Panama",7,2026,2,361,1.26288659793814,1.58070866141732,-1,"2","6","1"

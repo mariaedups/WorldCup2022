@@ -1,19 +1,16 @@
-library(readr)
-library(dplyr)
-
-path = './'
+path = '/Users/duda/Documents/World_Cup/'
 
 elo_2021 <- read_csv(paste0(path,'elo_2021.csv'))
 group_df <- read.csv(paste0(path,'group_df.csv'))
 
 # Get Host continent
-host_continent <- 'North America'
+host_continent <- 'Asia'
 
 df_with_elos <- merge(group_df,elo_2021,by.x = 'country',by.y = 'country_name')
 df_with_elos$host_continent <- rep(host_continent,nrow(df_with_elos))
 df_with_elos <- df_with_elos %>% filter(simulation == 1) # We just need 1 simulation to get the team elos and match data
 
-# Organize which matches are going to happen in the group phase 12x12 (144 matches)
+# Organize which matches are going to happen in the group phase 12x8 (96 matches)
 cols <- c('team', 'opp_team', 'stage_num','group','simulation') 
 
 df_group_stage <- data.frame(matrix(NA,
@@ -22,13 +19,11 @@ df_group_stage <- data.frame(matrix(NA,
 names(df_group_stage) <- cols
 stage <- 1
 
-n_simulations <- max(group_df$simulation)
-
 for(j in 1:n_simulations){
   
   # print(paste0('Simulation: ', j))
   
-  for (i in 1:12) {
+  for (i in 1:8) {
     
     # print(paste0('Group: ', i))
     group <- group_df %>% filter(group == i, simulation == j)
@@ -49,9 +44,9 @@ for(j in 1:n_simulations){
 
 df_group_stage <- na.omit(df_group_stage)
 
-# dim(df_group_stage) is indeed 144*n_simulations (checked)
+# dim(df_group_stage) is indeed 96*n_simulations (checked)
 
-df_group_stage$year <- rep(2026,nrow(df_group_stage))
+df_group_stage$year <- rep(2022,nrow(df_group_stage))
 df_intermediary <- merge(df_group_stage,df_with_elos %>% dplyr::select('country','score','continent','elo_score','num_matches',
                                                                        'goals_for','goals_against','host_continent'),by.x = 'team',by.y = 'country',
                          all.x=TRUE) 

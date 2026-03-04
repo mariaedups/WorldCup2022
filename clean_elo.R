@@ -1,6 +1,8 @@
 library(readr)
 library(dplyr)
 
+elo_raw <- read_csv('/Users/duda/Downloads/elo_rankings_raw_year_bf.csv')
+
 clean_elo <- function(elo_raw) {
   
   cols <- c('Year', 'country_name', 'elo_score', 'num_matches', 'goals_for', 
@@ -49,4 +51,5 @@ clean_elo <- function(elo_raw) {
 
 }
 
+clean_elo(elo_raw)
 

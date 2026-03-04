@@ -2,51 +2,48 @@ library(readr)
 library(dplyr)
 
 # Run code to get qualified teams
-source('qualifiers.R')
+# source('/Users/duda/Documents/World_Cup/qualifiers.R')
 
 # Putting teams in their respective pots
 
-# Hosts go to pot 1
-hosts <- c('United States', 'Mexico', 'Canada')
+# Host goes to pot 1
+host <- 'Qatar'
 
-qualified_teams$pot <- rep(NA, 48)
+qualified_teams$pot <- rep(NA,32)
 
-# Give the hosts some advantage so they are on the top
-qualified_teams[qualified_teams$country %in% hosts,]$score <- qualified_teams[qualified_teams$country %in% hosts,]$score + 2000
+# Give the host some advantage so it is on the top
+qualified_teams[qualified_teams$country == host,]$score <- qualified_teams[qualified_teams$country == host,]$score + 2000
 qualified_teams <- qualified_teams %>% arrange(-score)
 
-qualified_teams[1:12,]$pot <- 1
-qualified_teams[13:24,]$pot <- 2
-qualified_teams[25:36,]$pot <- 3
-qualified_teams[37:48,]$pot <- 4
+qualified_teams[1:8,]$pot <- 1
+qualified_teams[9:16,]$pot <- 2
+qualified_teams[17:24,]$pot <- 3
+qualified_teams[25:32,]$pot <- 4
 
-qualified_teams$group <- rep(NA, 48)
+qualified_teams$group <- rep(NA,32)
 
 draw_group <- function(qualified_teams){
   
   # Starting with pot 1
   
-  # Allocating hosts to specific groups (e.g., A, B, C or 1, 2, 3)
-  qualified_teams[qualified_teams$country == hosts[1],]$group <- 1
-  qualified_teams[qualified_teams$country == hosts[2],]$group <- 2
-  qualified_teams[qualified_teams$country == hosts[3],]$group <- 3
+  # Allocating Russia necessarily on group A
+  qualified_teams[qualified_teams$country == host,]$group <- 1
   qualified_teams <- qualified_teams %>% arrange(-score)
   
-  # Sampling who is going to group D - L (groups 4 - 12)
-  order_allocation <- sample(4:12, size = 9, rep = FALSE)
+  # Sampling who is going to group B - H
+  order_allocation <- sample(2:8,size = 7, rep = FALSE)
   
-  # i goes from 4 to 12 since first 3 are hosts
-  for(i in 4:12){
-    qualified_teams[i,]$group <- order_allocation[i-3]
+  for(i in 2:8){
+    qualified_teams[i,]$group <- order_allocation[i-1]
   }
   
-  # Moving to pots 2 to 4
+  # Moving to pot 2
   
   for(selected_pot in 2:4){
     
-    order_allocation <- sample(1:12, size = 12, rep = FALSE)
+    order_allocation <- sample(1:8,size = 8, rep = FALSE)
     
-    for(i in 1:12){
+    for(i in 1:8){
       
       cols <- c('j', 'count_countries_from_pot_x_in_group') 
       
@@ -56,7 +53,7 @@ draw_group <- function(qualified_teams){
                                    ncol = length(cols))) 
       names(df_cnt) <- cols
       
-      for(j in 1:12){
+      for(j in 1:8){
       
         list_count <- (qualified_teams %>% filter(pot == selected_pot) %>% .$group) == j
         list_count[is.na(list_count)] <- FALSE
@@ -94,7 +91,7 @@ draw_group <- function(qualified_teams){
         while(nrow(qualified_teams %>% filter(group == next_group)) == 4 | count >= 2){
           next_group <- next_group + 1
           
-          if(next_group > 12) break
+          if(next_group > 8) break
           
           count <- nrow(qualified_teams %>% filter(group == next_group & confederation == team_selected_line$confederation))
         }
@@ -114,12 +111,12 @@ draw_group <- function(qualified_teams){
         while(nrow(qualified_teams %>% filter(group == next_group)) == 4 | count >= 1){
           next_group <- next_group + 1
           
-          if(next_group > 12) break
+          if(next_group > 8) break
           
           count <- nrow(qualified_teams %>% filter(group == next_group & confederation == team_selected_line$confederation))
         }
           
-        # Need to create condition for when next group > 12
+        # Need to create condition for when next group > 8
           
         # We then know the team should go to the variable next group
         qualified_teams[qualified_teams$country == team_selected_line$country,]$group <- next_group
@@ -138,8 +135,8 @@ draw_group <- function(qualified_teams){
     
   }
   
-  # Fix the advantage we had previously added to the hosts
-  qualified_teams[qualified_teams$country %in% hosts,]$score <- qualified_teams[qualified_teams$country %in% hosts,]$score - 2000
+  # Fix the advantage we had previously added to the host
+  qualified_teams[qualified_teams$country == host,]$score <- qualified_teams[qualified_teams$country == host,]$score - 2000
   
   return(qualified_teams)
 
@@ -166,11 +163,11 @@ get_n_groups <- function(qualified_teams,n){
     
     print(check)
     
-    if((sum(df$group > 12) != 0) | (check != 12)) {
+    if((sum(df$group == 9) != 0) | (check != 8)) {
       n_groups <- n_groups
     } else {
       n_groups <- n_groups + 1
-      df$simulation <- rep(n_groups, 48)
+      df$simulation <- rep(n_groups,32)
       df_final <- rbind(df_final,df)
     }
     
