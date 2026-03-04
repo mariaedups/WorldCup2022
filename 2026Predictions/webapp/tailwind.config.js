@@ -10,12 +10,15 @@ module.exports = {
         "primary": "#CCFF00", // Electric Lime
         "primary-dim": "#b3e600",
         "secondary": "#3B82F6", // Electric Blue
+        "accent": "#CCFF00", // Added for Screen 1
+        "accent-secondary": "#3B82F6", // Added for Screen 1
         "accent-blue": "#3B82F6",
         "background-light": "#f8f8f5",
         "background-dark": "#0F1115", // Deep Charcoal
         "bg-main": "#0F1115",
         "surface": "#1A1D24", // Card backgrounds
         "bg-surface": "#1A1D24",
+        "border-muted": "#2A2E36", // Added for Screen 2
         "surface-highlight": "#232730",
         "text-main": "#F2F4F8",
         "text-muted": "#8A8D96",
@@ -25,6 +28,7 @@ module.exports = {
         "display": ["Fraunces", "serif"],
         "body": ["Newsreader", "serif"],
         "mono": ["Space Mono", "monospace"],
+        "sans": ["Newsreader", "serif"], // Added for Screen 2
         "serif-display": ["Fraunces", "serif"],
         "serif-body": ["Newsreader", "serif"],
       },

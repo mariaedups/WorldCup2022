@@ -100,3 +100,63 @@
 .animate-scroll-line {
     animation: scrollLine 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
+
+@keyframes real-time-flicker {
+    0%, 100% { opacity: 1; text-shadow: 0 0 2px #CCFF00; }
+    50% { opacity: 0.6; text-shadow: none; }
+    75% { opacity: 0.9; }
+}
+.animate-flicker {
+    animation: real-time-flicker 2s infinite ease-in-out;
+}
+
+@keyframes digit-shuffle {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-2px); color: #CCFF00; }
+    50% { transform: translateY(2px); }
+    100% { transform: translateY(0); }
+}
+.shuffling {
+    display: inline-block;
+    animation: digit-shuffle 0.1s infinite;
+}
+
+@keyframes score-flicker {
+    0%, 100% { transform: translateY(0); opacity: 1; }
+    10% { transform: translateY(-10%); opacity: 0.8; }
+    20% { transform: translateY(10%); opacity: 0.9; }
+    30% { transform: translateY(-20%); opacity: 0.7; }
+    40% { transform: translateY(20%); opacity: 1; }
+    50% { transform: translateY(-15%); opacity: 0.8; }
+    60% { transform: translateY(15%); opacity: 0.9; }
+    70% { transform: translateY(-5%); opacity: 0.7; }
+    80% { transform: translateY(5%); opacity: 1; }
+    90% { transform: translateY(-2%); opacity: 0.9; }
+}
+.animate-flicker-digit {
+    display: inline-block;
+    animation: score-flicker 1.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    filter: blur(0.5px);
+}
+
+.highlight-slide {
+    transition: opacity 0.8s ease-in-out;
+}
+.dot-active {
+    background-color: #CCFF00 !important;
+    width: 1.5rem !important;
+}
+
+.grid-pattern {
+    background-image: radial-gradient(circle, #2A2E36 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+.glow-primary {
+    box-shadow: 0 0 20px rgba(196, 242, 13, 0.2);
+}
+.bracket-line {
+    background-color: #2A2E36;
+}
+.bracket-line-active {
+    background-color: #c4f20d;
+}

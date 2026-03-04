@@ -41,8 +41,8 @@ export const Layout: React.FC<LayoutProps> = ({ children, activeChapter }) => {
                     href={`#chapter-${item.num}`}
                     className={`transition-colors ${
                       activeChapter === item.num
-                        ? 'text-primary font-bold border-b border-primary pb-0.5'
-                        : 'hover:text-primary'
+                        ? 'text-primary font-bold border-b border-primary pb-0.5 text-white'
+                        : 'text-white hover:text-primary'
                     }`}
                   >
                     {item.label}

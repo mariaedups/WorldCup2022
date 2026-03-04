@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
-// Example mocked groups, enough for visually shuffling
 type Team = {
   name: string;
   flag: string | null;
   host?: boolean;
-}
+};
 
+// Using actual image paths for some teams from the prompt where available
 const INITIAL_GROUPS: { id: string, teams: Team[] }[] = [
-  { id: 'A', teams: [{ name: 'MEX', flag: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCwyLGcc6dy0HlImE3CgLMPyRHlOejRpqBBtSH06buma5ahLrJFcB2ktF7TS_zOwb1wl9zjeJ_vPBGFUOzcJQfhZowrfWJgiplEbvDWjmGCeRhG645hd3jIb-Lnx3oG7eXIkhB6aGTlsax-SlUaia7PtFzT6lcamr75JV70id2I4B2D9n1JjmbA7897KrNSHq7jwxxonsYUdqvoxucXnSMihcQM7gJ7P3LIbWuCwqliKRBl9xrvPd5EgRMsCZa6lshjQMWvK9jdm7U', host: true }, { name: '---', flag: null }, { name: '---', flag: null }, { name: '---', flag: null }] },
-  { id: 'B', teams: [{ name: 'CAN', flag: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCgghIHI7dhun2guZEsbejK4nTN8u1C2MtsRgAx8FtSVD0we7q7jJP_LOcIUJUqIRbO8o5rD02LXcKGJIRPu4JWifGAxiWJZJR_rGS7r3D49sUwsbdLh6uTdIX-MDpEfsKBEj0CuLwvvBvwdMxnqZIAshh3mGBNQXZIIFTTuQaTzm310Rz_s-kya49f8G1N1-ZvXSNhUljlcwFH46LQcRptXf2c8Thnx4eVOywD1myMpEP-4zkPIENLUaDpZCVwgjxVUiWlkpg_ubw', host: true }, { name: '---', flag: null }, { name: '---', flag: null }, { name: '---', flag: null }] },
-  { id: 'C', teams: [{ name: 'USA', flag: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAaWnTsXWQtTKmiK17ceO_vzCzZpYroXmts--FPd3mDqWIuoJfgiVGJs03Ijdh51Wh8NyP5H9AjCE_n70Ts9LgUBQx74QlNuwCWwHqLzxydlSaTd2MuqLE3UlNEefODjzwBXHC0S-uYAlBoZXvHnCVU6BkInC0pX3ekcZOiGjagUvZwxlGT0ivSblReIQKKPbNZ5sSstK4mGwnf1GDvE3T56Mp5_jT74INIsSQLHFuyA8I7yNiXfxqiLXRYUGPDYe8j_rGaK18xcGs', host: true }, { name: '---', flag: null }, { name: '---', flag: null }, { name: '---', flag: null }] },
+  { id: 'A', teams: [{ name: 'MEX', host: true, flag: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCwyLGcc6dy0HlImE3CgLMPyRHlOejRpqBBtSH06buma5ahLrJFcB2ktF7TS_zOwb1wl9zjeJ_vPBGFUOzcJQfhZowrfWJgiplEbvDWjmGCeRhG645hd3jIb-Lnx3oG7eXIkhB6aGTlsax-SlUaia7PtFzT6lcamr75JV70id2I4B2D9n1JjmbA7897KrNSHq7jwxxonsYUdqvoxucXnSMihcQM7gJ7P3LIbWuCwqliKRBl9xrvPd5EgRMsCZa6lshjQMWvK9jdm7U' }, { name: '---', flag: null }, { name: '---', flag: null }, { name: '---', flag: null }] },
+  { id: 'B', teams: [{ name: 'CAN', host: true, flag: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCgghIHI7dhun2guZEsbejK4nTN8u1C2MtsRgAx8FtSVD0we7q7jJP_LOcIUJUqIRbO8o5rD02LXcKGJIRPu4JWifGAxiWJZJR_rGS7r3D49sUwsbdLh6uTdIX-MDpEfsKBEj0CuLwvvBvwdMxnqZIAshh3mGBNQXZIIFTTuQaTzm310Rz_s-kya49f8G1N1-ZvXSNhUljlcwFH46LQcRptXf2c8Thnx4eVOywD1myMpEP-4zkPIENLUaDpZCVwgjxVUiWlkpg_ubw' }, { name: '---', flag: null }, { name: '---', flag: null }, { name: '---', flag: null }] },
+  { id: 'C', teams: [{ name: 'USA', host: true, flag: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAaWnTsXWQtTKmiK17ceO_vzCzZpYroXmts--FPd3mDqWIuoJfgiVGJs03Ijdh51Wh8NyP5H9AjCE_n70Ts9LgUBQx74QlNuwCWwHqLzxydlSaTd2MuqLE3UlNEefODjzwBXHC0S-uYAlBoZXvHnCVU6BkInC0pX3ekcZOiGjagUvZwxlGT0ivSblReIQKKPbNZ5sSstK4mGwnf1GDvE3T56Mp5_jT74INIsSQLHFuyA8I7yNiXfxqiLXRYUGPDYe8j_rGaK18xcGs' }, { name: '---', flag: null }, { name: '---', flag: null }, { name: '---', flag: null }] },
   { id: 'D', teams: [{ name: 'BRA', flag: 'https://lh3.googleusercontent.com/aida-public/AB6AXuARJDGAo5HTV9694Te4ftKe6al0YexfWp-wWZMCitFsMgNpv4tLOwQB9CkEQHzes38atsFtYpPwGwiheOcihuSuzbRt4NMvDpXfIvPTb_IPXTKUUSdkkCPwEojhYewrkEyTILDuDljA1DJ1V7CHEsowvKwNIsQfSgl42FR607aZ4Qw86jfa_f20ShJfS6dviRIc-F9Dg2ZgGJJ_rukH81rOO8Pr2ErS-2uVLn_oPSr7Q2htr88ERBDMY6jLZTrBy0JSD1FkR0uhu1o' }, { name: '---', flag: null }, { name: '---', flag: null }, { name: '---', flag: null }] },
   { id: 'E', teams: [{ name: 'BEL', flag: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDhOAGHgN3Gj8qCAqvFM_mNz_1p9HhO4YJe2DtxZyXj_x7jxyWEncmGwxRvX2Uktl3wyIAyWmjt7UHRIaxHCIgXowpAZT5_mFiDrD5LuiV0f0vUV8wLdRAsaULnlgv_xWAuIQMM_CVJACXi_C_d-QFbIPv8aNd-TB_YQxw0Iak8FILUvdrVIrybMF9hC4V78UWEixplA_BjybCMbzzesUHr_owqtKoKd1Ov--mm6YV03fDg875PhaQkdtHeGT24NzAIhbBAr7FfhUg' }, { name: '---', flag: null }, { name: '---', flag: null }, { name: '---', flag: null }] },
   { id: 'F', teams: [{ name: 'FRA', flag: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB1Mv702GJh3j6DpIBPwp3lkFp-KjxZDUkw5TQs8FkmxXeT_jl3U90R-hpxhFQhjM8qODQgYDCrOBGJcd21lkN7gMrfIqj3giefuCrj4UyqXKWLymj8O_iSyBeyoJwL6ztNjr-3bOaSv-EOjEXcGbzTHxeoPxyU-pCChCt8wsPBc4VdG8QrrP40FwRGvsDHesS8IBSx7v_zfJkZixOtT1gNYkCtJNJhZ5ZoaaUq9OECj0M0AH7FpJCp5O3vc-BPPObr_rFol0SpJRI' }, { name: '---', flag: null }, { name: '---', flag: null }, { name: '---', flag: null }] },
@@ -89,7 +89,7 @@ export const Chapter2: React.FC = () => {
                 <span className="material-symbols-outlined text-[18px]">
                   {isShuffling ? 'hourglass_empty' : 'shuffle'}
                 </span>
-                {isShuffling ? 'Distributing...' : 'distribute groups'}
+                {isShuffling ? 'Distributing...' : 'Randomize Draw'}
               </span>
               {/* Button Shine Effect */}
               <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent z-0"></div>
