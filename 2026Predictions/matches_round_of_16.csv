@@ -1,17 +1,161 @@
 "team","group_team","rank_team","opp_team","group_opp_team","rank_opp","match_num","simulation"
-"Argentina",4,3,"Norway",5,1,1,1
-"Canada",3,3,"Italy",9,1,2,1
-"New Zealand",11,1,"Iran",7,1,3,1
-"Egypt",2,3,"Saudi Arabia",6,1,4,1
-"Chile",8,1,"Germany",11,3,5,1
-"Panama",7,2,"Ecuador",1,1,6,1
-"Croatia",5,3,"Uzbekistan",2,2,7,1
-"Tunisia",4,1,"Cameroon",10,2,8,1
-"Uzbekistan",2,1,"Costa Rica",7,1,1,2
-"New Zealand",1,1,"Qatar",12,1,2,2
-"Croatia",4,2,"Germany",9,2,3,2
-"Colombia",7,2,"Egypt",1,2,4,2
-"Nigeria",2,2,"Canada",3,2,5,2
-"Algeria",9,1,"Ecuador",10,1,6,2
-"Ghana",11,3,"Panama",6,1,7,2
-"Japan",3,1,"Brazil",4,1,8,2
+"South Africa",6,1,"Austria",6,3,1,1
+"Germany",12,2,"Spain",9,2,2,1
+"Brazil",12,1,"Senegal",10,2,3,1
+"Haiti",7,3,"Qatar",9,1,4,1
+"Paraguay",2,2,"Denmark",8,2,5,1
+"Jamaica",4,3,"Australia",6,2,6,1
+"Belgium",8,1,"Poland",5,3,7,1
+"Morocco",7,1,"Canada",3,2,8,1
+"Mexico",2,2,"Korea Republic",2,1,1,2
+"Saudi Arabia",11,1,"Poland",8,3,2,2
+"Colombia",10,3,"Portugal",8,1,3,2
+"Costa Rica",12,1,"Austria",4,1,4,2
+"Denmark",3,2,"Chile",1,1,5,2
+"Egypt",3,3,"Cameroon",6,2,6,2
+"Jamaica",7,1,"Haiti",5,2,7,2
+"Panama",4,2,"Nigeria",10,2,8,2
+"Costa Rica",4,1,"Chile",1,3,1,3
+"Nigeria",11,2,"Ecuador",9,3,2,3
+"Argentina",7,1,"Portugal",4,2,3,3
+"Poland",5,1,"Cameroon",12,2,4,3
+"Canada",3,2,"Croatia",6,3,5,3
+"Scotland",9,2,"Qatar",2,2,6,3
+"Egypt",8,2,"Korea Republic",7,2,7,3
+"United States",1,1,"Iran",6,2,8,3
+"Brazil",10,3,"Japan",8,3,1,4
+"Scotland",6,3,"Costa Rica",4,3,2,4
+"Ghana",1,2,"South Africa",9,2,3,4
+"Denmark",11,3,"Australia",9,3,4,4
+"Portugal",12,2,"Ecuador",11,1,5,4
+"Jamaica",7,1,"Morocco",2,1,6,4
+"Canada",3,2,"Panama",10,1,7,4
+"Egypt",4,1,"Croatia",5,1,8,4
+"Canada",3,3,"Iran",11,1,1,5
+"Senegal",2,1,"Jordan",12,1,2,5
+"Spain",12,2,"France",6,1,3,5
+"South Africa",6,3,"Mexico",2,2,4,5
+"Norway",12,3,"Argentina",9,3,5,5
+"Costa Rica",5,1,"Chile",5,3,6,5
+"Ghana",7,1,"Wales",10,2,7,5
+"Australia",9,1,"Belgium",7,2,8,5
+"Australia",5,1,"Uruguay",7,1,1,6
+"England",11,2,"Denmark",10,1,2,6
+"Costa Rica",4,1,"Senegal",1,2,3,6
+"Qatar",3,3,"Haiti",8,2,4,6
+"Norway",3,1,"Jordan",1,1,5,6
+"Cameroon",2,2,"Croatia",6,2,6,6
+"Korea Republic",10,3,"Ecuador",9,2,7,6
+"Chile",12,3,"New Zealand",12,1,8,6
+"Costa Rica",12,2,"Poland",10,3,1,7
+"Argentina",12,1,"Nigeria",9,1,2,7
+"Algeria",1,3,"Chile",3,2,3,7
+"France",10,2,"Colombia",6,2,4,7
+"Cameroon",6,3,"Paraguay",2,1,5,7
+"Haiti",4,2,"Panama",5,3,6,7
+"New Zealand",7,2,"Netherlands",8,2,7,7
+"Wales",1,1,"Japan",7,1,8,7
+"Tunisia",9,1,"Scotland",1,3,1,8
+"South Africa",11,2,"New Zealand",9,2,2,8
+"Belgium",4,1,"Morocco",8,1,3,8
+"Ghana",2,1,"France",12,2,4,8
+"Germany",10,2,"Japan",2,3,5,8
+"Austria",11,3,"Jordan",3,1,6,8
+"Egypt",3,2,"Panama",6,1,7,8
+"Haiti",8,2,"Paraguay",10,1,8,8
+"Haiti",5,2,"Colombia",7,1,1,9
+"Morocco",12,3,"Croatia",10,1,2,9
+"Italy",11,3,"Cameroon",8,2,3,9
+"Qatar",11,2,"France",4,3,4,9
+"Japan",10,2,"Scotland",7,2,5,9
+"Senegal",1,1,"New Zealand",1,2,6,9
+"Ecuador",4,1,"Paraguay",9,1,7,9
+"Australia",1,3,"Chile",8,1,8,9
+"Scotland",1,2,"Uzbekistan",4,1,1,10
+"New Zealand",2,1,"Ghana",3,1,2,10
+"Brazil",4,2,"Austria",3,3,3,10
+"Paraguay",9,1,"Algeria",10,1,4,10
+"Denmark",10,2,"Cameroon",9,3,5,10
+"Italy",5,2,"Netherlands",6,3,6,10
+"Canada",3,2,"Korea Republic",2,2,7,10
+"Iran",8,2,"Costa Rica",6,1,8,10
+"Qatar",11,3,"Scotland",1,1,1,11
+"Wales",2,3,"Paraguay",8,3,2,11
+"Portugal",9,1,"Denmark",4,1,3,11
+"Egypt",9,3,"Uzbekistan",9,2,4,11
+"Colombia",6,2,"Mexico",2,2,5,11
+"Panama",12,3,"Jamaica",5,1,6,11
+"Ecuador",5,2,"Ecuador",5,3,7,11
+"Morocco",7,1,"Japan",2,1,8,11
+"Wales",6,1,"Egypt",2,1,1,12
+"Denmark",5,3,"Cameroon",7,1,2,12
+"Canada",3,1,"Norway",4,1,3,12
+"Japan",12,2,"Algeria",1,3,4,12
+"Iran",5,2,"Brazil",7,2,5,12
+"Saudi Arabia",6,3,"Colombia",12,3,6,12
+"Panama",11,3,"Austria",3,2,7,12
+"Haiti",4,2,"England",12,1,8,12
+"Costa Rica",6,1,"Colombia",10,1,1,13
+"Canada",3,3,"Poland",1,1,2,13
+"Scotland",1,2,"Australia",4,2,3,13
+"France",11,2,"Haiti",10,2,4,13
+"Uruguay",8,3,"Paraguay",12,1,5,13
+"New Zealand",2,3,"New Zealand",2,2,6,13
+"Chile",11,3,"Ghana",11,1,7,13
+"Mexico",2,1,"Saudi Arabia",12,2,8,13
+"Nigeria",5,3,"Iran",12,1,1,14
+"New Zealand",2,1,"Panama",5,1,2,14
+"Ghana",6,2,"Uzbekistan",4,2,3,14
+"Croatia",3,1,"Denmark",4,1,4,14
+"Costa Rica",7,1,"Cameroon",9,3,5,14
+"Cameroon",9,2,"Haiti",8,2,6,14
+"Colombia",5,2,"Brazil",9,1,7,14
+"Morocco",3,2,"Italy",6,3,8,14
+"Portugal",7,3,"Uruguay",6,3,1,15
+"Jordan",4,2,"Austria",7,1,2,15
+"Algeria",2,3,"France",12,3,3,15
+"Denmark",10,2,"Poland",11,1,4,15
+"Iran",9,2,"Colombia",5,2,5,15
+"Chile",3,2,"Mexico",2,2,6,15
+"United States",1,3,"Brazil",10,3,7,15
+"Costa Rica",6,1,"Argentina",8,1,8,15
+"Costa Rica",6,1,"Jamaica",11,3,1,16
+"New Zealand",9,1,"Haiti",4,3,2,16
+"Uruguay",12,1,"Jordan",1,1,3,16
+"Mexico",2,2,"United States",1,3,4,16
+"Cameroon",3,1,"Qatar",11,1,5,16
+"Poland",1,2,"Portugal",9,3,6,16
+"Chile",9,2,"Ghana",12,2,7,16
+"Tunisia",2,1,"Spain",7,2,8,16
+"Morocco",3,1,"Korea Republic",8,3,1,17
+"Tunisia",4,1,"Haiti",11,1,2,17
+"Qatar",6,3,"Jordan",2,1,3,17
+"Nigeria",10,1,"Australia",7,1,4,17
+"Colombia",2,2,"Scotland",5,1,5,17
+"Chile",5,2,"Saudi Arabia",4,2,6,17
+"Croatia",1,2,"Cameroon",5,3,7,17
+"Iran",1,3,"Japan",12,2,8,17
+"Nigeria",5,3,"Costa Rica",7,3,1,18
+"Japan",12,3,"Ecuador",10,3,2,18
+"Australia",4,1,"Senegal",4,3,3,18
+"Uzbekistan",8,2,"Germany",3,1,4,18
+"Argentina",6,1,"Cameroon",2,1,5,18
+"Uruguay",5,2,"Belgium",7,2,6,18
+"Panama",4,2,"Colombia",9,2,7,18
+"Spain",8,1,"Egypt",6,2,8,18
+"Chile",5,1,"Austria",6,2,1,19
+"South Africa",5,3,"Japan",12,2,2,19
+"Jordan",9,3,"Italy",9,2,3,19
+"Canada",3,3,"Haiti",4,3,4,19
+"Argentina",4,2,"Egypt",9,1,5,19
+"Jamaica",7,1,"Ghana",7,2,6,19
+"Scotland",10,2,"Australia",6,1,7,19
+"Iran",4,1,"Ecuador",1,2,8,19
+"Ecuador",12,3,"Uruguay",4,3,1,20
+"Scotland",8,3,"Paraguay",7,1,2,20
+"Uzbekistan",11,1,"Canada",3,2,3,20
+"Jamaica",12,2,"Belgium",12,1,4,20
+"Japan",10,1,"Iran",6,2,5,20
+"Saudi Arabia",9,1,"Ghana",2,3,6,20
+"Poland",2,1,"Korea Republic",1,2,7,20
+"Jordan",5,2,"Costa Rica",8,2,8,20

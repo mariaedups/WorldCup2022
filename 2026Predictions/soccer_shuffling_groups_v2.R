@@ -180,5 +180,5 @@ get_n_groups <- function(qualified_teams,n){
   return(df_final)
 }
 
-teams <- get_n_groups(qualified_teams,2)
+teams <- get_n_groups(qualified_teams,20)
 write.csv(teams, 'group_df.csv', row.names = FALSE)
