@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background-dark text-text-main font-body antialiased overflow-x-hidden selection:bg-primary selection:text-black;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(204, 255, 0, 0.4);
+  }
+  .text-shadow-glow {
+    text-shadow: 0 0 40px rgba(242, 244, 248, 0.2);
+  }
+  .bg-floodlight {
+    background: radial-gradient(circle at top center, rgba(204, 255, 0, 0.08) 0%, rgba(15, 17, 21, 0) 60%);
+  }
+  .bg-floodlight-gradient {
+    background: radial-gradient(circle at 50% 0%, rgba(20, 30, 40, 0.8) 0%, rgba(15, 17, 21, 1) 70%);
+  }
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-700 { animation-delay: 700ms; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0F1115;
+}
+::-webkit-scrollbar-thumb {
+    background: #2A2E36;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #CCFF00;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@keyframes riseUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-rise {
+    animation: riseUp 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    opacity: 0; /* Start hidden */
+}
+
+@keyframes growBar {
+    from { width: 0%; }
+}
+.animate-bar {
+    animation: growBar 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.slot-machine-blur {
+    animation: slotBlur 0.1s infinite;
+}
+
+@keyframes slotBlur {
+    0% { filter: blur(0px); transform: translateY(0); }
+    50% { filter: blur(2px); transform: translateY(-1px); }
+    100% { filter: blur(0px); transform: translateY(1px); }
+}
+
+@keyframes scrollLine {
+    0% { transform: scaleY(0); transform-origin: top; opacity: 0; }
+    50% { transform: scaleY(1); transform-origin: top; opacity: 1; }
+    51% { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+    100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+}
+
+.animate-scroll-line {
+    animation: scrollLine 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
