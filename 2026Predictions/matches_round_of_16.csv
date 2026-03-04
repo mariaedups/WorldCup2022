@@ -1,17 +1,801 @@
 "team","group_team","rank_team","opp_team","group_opp_team","rank_opp","match_num","simulation"
-"Argentina",4,3,"Norway",5,1,1,1
-"Canada",3,3,"Italy",9,1,2,1
-"New Zealand",11,1,"Iran",7,1,3,1
-"Egypt",2,3,"Saudi Arabia",6,1,4,1
-"Chile",8,1,"Germany",11,3,5,1
-"Panama",7,2,"Ecuador",1,1,6,1
-"Croatia",5,3,"Uzbekistan",2,2,7,1
-"Tunisia",4,1,"Cameroon",10,2,8,1
-"Uzbekistan",2,1,"Costa Rica",7,1,1,2
-"New Zealand",1,1,"Qatar",12,1,2,2
-"Croatia",4,2,"Germany",9,2,3,2
-"Colombia",7,2,"Egypt",1,2,4,2
-"Nigeria",2,2,"Canada",3,2,5,2
-"Algeria",9,1,"Ecuador",10,1,6,2
-"Ghana",11,3,"Panama",6,1,7,2
-"Japan",3,1,"Brazil",4,1,8,2
+"Qatar",4,3,"Portugal",5,1,1,1
+"Algeria",11,1,"Nigeria",1,1,2,1
+"Ghana",9,2,"Cameroon",10,1,3,1
+"Austria",2,3,"Uzbekistan",2,2,4,1
+"England",12,2,"France",10,2,5,1
+"Jordan",8,1,"Norway",5,2,6,1
+"Germany",11,2,"Canada",3,2,7,1
+"Saudi Arabia",6,1,"Brazil",7,2,8,1
+"Uzbekistan",2,1,"Uruguay",6,3,1,2
+"Japan",3,3,"Costa Rica",7,1,2,2
+"Korea Republic",7,2,"Panama",6,1,3,2
+"Netherlands",10,3,"Ecuador",10,2,4,2
+"Austria",1,1,"Haiti",4,1,5,2
+"Croatia",4,3,"Algeria",9,1,6,2
+"United States",1,3,"Scotland",5,2,7,2
+"Jamaica",10,1,"Nigeria",2,2,8,2
+"Senegal",7,1,"Haiti",7,3,1,3
+"Qatar",11,1,"Poland",4,1,2,3
+"Portugal",6,1,"Saudi Arabia",8,2,3,3
+"Mexico",2,2,"Canada",3,1,4,3
+"Algeria",8,1,"Costa Rica",4,3,5,3
+"Uruguay",11,2,"England",12,1,6,3
+"Chile",6,2,"South Africa",9,2,7,3
+"Japan",4,2,"Ecuador",1,2,8,3
+"France",8,3,"Portugal",7,3,1,4
+"United States",1,3,"Cameroon",11,3,2,4
+"Costa Rica",6,2,"Nigeria",2,1,3,4
+"Haiti",9,3,"Australia",8,1,4,4
+"Norway",7,2,"Paraguay",9,2,5,4
+"Egypt",10,2,"Iran",11,2,6,4
+"Ghana",1,2,"Algeria",5,1,7,4
+"Panama",4,1,"Uzbekistan",2,2,8,4
+"Canada",3,3,"Scotland",1,2,1,5
+"Morocco",2,1,"Uzbekistan",3,1,2,5
+"Australia",7,2,"Haiti",12,3,3,5
+"New Zealand",7,1,"Iran",8,1,4,5
+"Denmark",9,3,"Croatia",8,3,5,5
+"Jamaica",5,2,"Panama",4,2,6,5
+"South Africa",9,2,"Ghana",1,3,7,5
+"Qatar",11,1,"Costa Rica",10,1,8,5
+"Uzbekistan",1,3,"Japan",6,3,1,6
+"Uruguay",8,1,"Ecuador",11,3,2,6
+"Canada",3,2,"Norway",11,2,3,6
+"Jordan",3,1,"Morocco",9,1,4,6
+"Argentina",4,1,"Panama",6,2,5,6
+"Germany",6,1,"New Zealand",7,1,6,6
+"Mexico",2,2,"Austria",8,2,7,6
+"England",10,2,"Haiti",5,1,8,6
+"Jordan",3,1,"Colombia",11,2,1,7
+"Nigeria",8,2,"Jamaica",12,1,2,7
+"Japan",1,1,"Korea Republic",10,2,3,7
+"Costa Rica",8,1,"Ghana",9,1,4,7
+"Canada",3,2,"Australia",2,3,5,7
+"Haiti",5,2,"Norway",9,3,6,7
+"Egypt",7,1,"Denmark",7,3,7,7
+"Argentina",4,3,"Austria",1,3,8,7
+"Senegal",5,3,"Australia",8,1,1,8
+"Belgium",9,3,"Poland",2,3,2,8
+"Tunisia",11,1,"Denmark",8,2,3,8
+"Costa Rica",4,2,"Iran",9,2,4,8
+"Haiti",8,3,"Austria",10,2,5,8
+"Wales",6,2,"Colombia",3,2,6,8
+"Netherlands",9,1,"Jamaica",5,1,7,8
+"Chile",1,2,"Argentina",12,3,8,8
+"Chile",7,3,"Haiti",6,2,1,9
+"Wales",5,2,"Iran",3,3,2,9
+"Jordan",11,3,"Switzerland",12,1,3,9
+"Senegal",8,3,"Denmark",9,1,4,9
+"Australia",8,2,"Ecuador",10,2,5,9
+"Croatia",2,2,"Cameroon",3,1,6,9
+"Austria",1,2,"Colombia",11,1,7,9
+"Morocco",12,2,"Canada",3,2,8,9
+"Costa Rica",6,1,"Cameroon",9,1,1,10
+"Saudi Arabia",10,1,"Argentina",4,2,2,10
+"Jordan",12,2,"Korea Republic",11,3,3,10
+"Austria",2,1,"England",6,2,4,10
+"Tunisia",11,1,"Algeria",12,3,5,10
+"Mexico",2,2,"Haiti",5,2,6,10
+"Scotland",3,3,"Morocco",1,3,7,10
+"Germany",5,1,"New Zealand",1,1,8,10
+"United States",1,3,"Australia",4,3,1,11
+"Algeria",5,1,"Canada",3,2,2,11
+"Norway",3,1,"Poland",7,2,3,11
+"Qatar",6,3,"Iran",1,2,4,11
+"Japan",12,3,"Nigeria",7,3,5,11
+"Austria",12,1,"Mexico",2,2,6,11
+"Haiti",5,2,"New Zealand",7,1,7,11
+"Costa Rica",11,2,"Ghana",1,1,8,11
+"Iran",12,3,"Canada",3,1,1,12
+"Korea Republic",7,1,"Colombia",1,1,2,12
+"Nigeria",6,1,"Poland",10,2,3,12
+"Costa Rica",6,2,"Cameroon",12,2,4,12
+"Croatia",3,2,"Switzerland",4,2,5,12
+"Panama",5,3,"Belgium",9,2,6,12
+"New Zealand",1,2,"Austria",5,1,7,12
+"Jordan",9,3,"Ghana",11,1,8,12
+"Costa Rica",4,1,"Tunisia",2,1,1,13
+"Chile",5,2,"South Africa",3,3,2,13
+"Uzbekistan",12,2,"Ghana",6,1,3,13
+"Uruguay",10,2,"Morocco",8,1,4,13
+"Austria",4,2,"Spain",9,2,5,13
+"Scotland",7,2,"Korea Republic",2,2,6,13
+"Jordan",1,1,"Canada",3,1,7,13
+"Colombia",3,2,"Australia",6,2,8,13
+"Algeria",7,3,"Ecuador",1,1,1,14
+"Denmark",6,3,"Canada",3,1,2,14
+"Norway",10,2,"Costa Rica",12,2,3,14
+"Ghana",10,1,"South Africa",11,1,4,14
+"Nigeria",8,3,"Haiti",9,2,5,14
+"France",4,2,"Jamaica",4,1,6,14
+"Colombia",10,3,"Uzbekistan",7,2,7,14
+"Panama",5,1,"Japan",1,2,8,14
+"Egypt",6,3,"Mexico",2,3,1,15
+"Morocco",11,3,"Australia",1,3,2,15
+"Argentina",11,1,"Panama",11,2,3,15
+"Senegal",4,2,"Haiti",12,2,4,15
+"United States",1,2,"Algeria",5,2,5,15
+"England",8,2,"Japan",8,3,6,15
+"Nigeria",2,1,"Ghana",9,2,7,15
+"Jordan",7,3,"Korea Republic",3,2,8,15
+"Uzbekistan",6,3,"New Zealand",8,1,1,16
+"Egypt",7,1,"Saudi Arabia",3,1,2,16
+"Korea Republic",1,1,"Paraguay",10,2,3,16
+"Costa Rica",11,1,"Panama",5,3,4,16
+"Netherlands",4,3,"Canada",3,2,5,16
+"Switzerland",10,3,"Brazil",11,2,6,16
+"Scotland",5,1,"Belgium",10,1,7,16
+"Norway",12,1,"Nigeria",8,2,8,16
+"England",9,3,"Haiti",6,1,1,17
+"Jordan",10,3,"Jamaica",7,1,2,17
+"Qatar",12,1,"Germany",2,1,3,17
+"Brazil",5,3,"Costa Rica",4,2,4,17
+"Algeria",6,2,"Australia",8,1,5,17
+"Egypt",1,3,"Panama",11,1,6,17
+"Japan",5,1,"Ecuador",9,1,7,17
+"Spain",7,2,"Paraguay",10,1,8,17
+"Brazil",9,3,"Qatar",7,3,1,18
+"Japan",3,1,"Egypt",4,3,2,18
+"South Africa",11,1,"Croatia",7,2,3,18
+"Poland",12,1,"Panama",5,2,4,18
+"Ghana",3,2,"Ecuador",2,3,5,18
+"Jamaica",8,2,"Saudi Arabia",1,2,6,18
+"New Zealand",9,2,"Morocco",10,2,7,18
+"Mexico",2,1,"England",4,2,8,18
+"Algeria",12,2,"Ghana",1,1,1,19
+"France",5,3,"Senegal",10,3,2,19
+"Panama",12,1,"Cameroon",3,1,3,19
+"Mexico",2,1,"Netherlands",3,2,4,19
+"Portugal",11,3,"England",7,2,5,19
+"Croatia",2,2,"Poland",5,2,6,19
+"Costa Rica",8,2,"Austria",6,2,7,19
+"Morocco",7,1,"New Zealand",10,1,8,19
+"Costa Rica",12,1,"Egypt",3,3,1,20
+"Nigeria",10,1,"Algeria",1,1,2,20
+"Japan",8,1,"Cameroon",6,2,3,20
+"New Zealand",7,2,"Haiti",5,2,4,20
+"Netherlands",2,1,"Canada",3,2,5,20
+"Scotland",5,1,"United States",1,3,6,20
+"Paraguay",11,1,"Australia",6,3,7,20
+"Germany",11,2,"Jordan",10,2,8,20
+"France",12,3,"Iran",6,1,1,21
+"Uzbekistan",1,1,"Scotland",9,1,2,21
+"Haiti",10,1,"Panama",5,2,3,21
+"Portugal",4,3,"Ghana",3,2,4,21
+"South Africa",7,2,"England",8,2,5,21
+"Austria",2,1,"Chile",1,2,6,21
+"Croatia",6,2,"Italy",9,2,7,21
+"Nigeria",11,2,"Algeria",4,2,8,21
+"Jamaica",7,1,"Ecuador",11,1,1,22
+"Canada",3,1,"Norway",5,3,2,22
+"Egypt",4,3,"Belgium",8,1,3,22
+"Korea Republic",1,3,"Poland",1,1,4,22
+"Uzbekistan",7,2,"Saudi Arabia",2,1,5,22
+"Morocco",2,2,"Tunisia",10,1,6,22
+"Colombia",9,2,"New Zealand",6,1,7,22
+"Netherlands",12,1,"Nigeria",11,2,8,22
+"Morocco",5,3,"Korea Republic",7,1,1,23
+"Uruguay",4,2,"Wales",10,1,2,23
+"Iran",11,1,"Jordan",12,2,3,23
+"Saudi Arabia",8,2,"Jamaica",6,1,4,23
+"Qatar",10,2,"Norway",12,1,5,23
+"Ecuador",2,1,"France",6,3,6,23
+"England",5,2,"Cameroon",11,2,7,23
+"Colombia",6,2,"Canada",3,2,8,23
+"Cameroon",2,3,"Jamaica",6,1,1,24
+"England",11,3,"Austria",11,2,2,24
+"Poland",9,1,"Panama",7,2,3,24
+"Haiti",8,1,"Canada",3,1,4,24
+"Iran",7,3,"Saudi Arabia",6,2,5,24
+"Argentina",10,2,"Ecuador",9,3,6,24
+"Japan",2,2,"Denmark",10,3,7,24
+"Nigeria",8,3,"Australia",5,3,8,24
+"Costa Rica",12,1,"Panama",5,2,1,25
+"Italy",6,3,"Belgium",5,3,2,25
+"Germany",12,3,"Egypt",3,3,3,25
+"Wales",1,2,"England",9,3,4,25
+"Nigeria",9,2,"Switzerland",2,1,5,25
+"Uzbekistan",3,2,"Saudi Arabia",1,1,6,25
+"South Africa",2,2,"Japan",7,2,7,25
+"Spain",11,2,"Cameroon",6,1,8,25
+"Qatar",7,1,"Japan",2,3,1,26
+"Morocco",8,1,"Poland",12,2,2,26
+"Tunisia",9,1,"Algeria",10,1,3,26
+"United States",1,2,"England",5,2,4,26
+"Iran",11,1,"Cameroon",12,3,5,26
+"New Zealand",9,3,"Costa Rica",4,3,6,26
+"Ghana",2,2,"Canada",3,2,7,26
+"Germany",10,2,"Panama",6,2,8,26
+"England",9,3,"Chile",8,2,1,27
+"Wales",9,2,"Morocco",12,2,2,27
+"Netherlands",12,1,"Uzbekistan",2,1,3,27
+"Nigeria",4,3,"Ghana",6,3,4,27
+"Canada",3,3,"Austria",6,1,5,27
+"Australia",1,2,"Germany",5,3,6,27
+"South Africa",7,3,"Denmark",11,2,7,27
+"Saudi Arabia",3,1,"Panama",10,2,8,27
+"Morocco",7,2,"Argentina",6,3,1,28
+"Canada",3,1,"Norway",11,1,2,28
+"Jamaica",4,1,"Ecuador",10,2,3,28
+"England",9,3,"Tunisia",4,2,4,28
+"Egypt",6,1,"Croatia",2,2,5,28
+"Austria",3,2,"France",12,1,6,28
+"Iran",8,1,"Costa Rica",6,2,7,28
+"Cameroon",9,1,"Saudi Arabia",11,2,8,28
+"Jamaica",5,1,"England",11,1,1,29
+"Brazil",10,3,"Haiti",4,1,2,29
+"Italy",6,1,"Costa Rica",6,2,3,29
+"Japan",2,2,"Croatia",1,2,4,29
+"Austria",10,1,"Germany",7,2,5,29
+"Nigeria",11,2,"Iran",12,3,6,29
+"Uzbekistan",9,1,"Panama",12,2,7,29
+"Tunisia",5,2,"Cameroon",2,1,8,29
+"Senegal",8,3,"Italy",6,3,1,30
+"Ecuador",5,3,"Jordan",9,1,2,30
+"Morocco",11,2,"Scotland",9,3,3,30
+"Haiti",4,2,"Austria",3,3,4,30
+"Cameroon",7,1,"Poland",1,1,5,30
+"Chile",11,3,"Switzerland",10,2,6,30
+"Egypt",2,1,"New Zealand",2,2,7,30
+"Argentina",9,2,"Croatia",7,2,8,30
+"Ghana",11,1,"Colombia",10,2,1,31
+"Poland",1,1,"Iran",6,2,2,31
+"Austria",5,1,"Germany",9,2,3,31
+"Costa Rica",6,3,"Korea Republic",8,2,4,31
+"Mexico",2,3,"New Zealand",2,2,5,31
+"Nigeria",9,3,"Uzbekistan",9,1,6,31
+"Croatia",4,3,"United States",1,2,7,31
+"Norway",11,3,"Haiti",10,1,8,31
+"Germany",9,3,"Egypt",11,3,1,32
+"United States",1,1,"Tunisia",2,1,2,32
+"Nigeria",5,2,"Cameroon",9,1,3,32
+"Austria",6,1,"Wales",11,1,4,32
+"Jordan",1,3,"Norway",6,2,5,32
+"Qatar",3,2,"Uzbekistan",4,1,6,32
+"Haiti",8,2,"New Zealand",2,2,7,32
+"Argentina",7,2,"Scotland",10,2,8,32
+"Colombia",5,1,"Egypt",8,3,1,33
+"Cameroon",10,1,"Paraguay",11,1,2,33
+"Netherlands",12,3,"Ghana",7,1,3,33
+"New Zealand",9,1,"South Africa",5,2,4,33
+"Jamaica",4,1,"Korea Republic",7,2,5,33
+"Brazil",10,2,"Haiti",11,2,6,33
+"Tunisia",4,2,"Nigeria",6,2,7,33
+"Panama",8,1,"England",9,2,8,33
+"Ghana",12,3,"France",6,2,1,34
+"Australia",2,2,"United States",1,2,2,34
+"Japan",12,1,"South Africa",7,3,3,34
+"Panama",5,2,"Switzerland",6,3,4,34
+"Italy",4,2,"Norway",3,2,5,34
+"Argentina",8,2,"Saudi Arabia",8,3,6,34
+"Belgium",10,1,"Nigeria",9,1,7,34
+"Morocco",6,1,"Paraguay",10,2,8,34
+"Ghana",8,1,"Tunisia",4,1,1,35
+"Panama",7,1,"Uzbekistan",3,3,2,35
+"Wales",12,2,"Croatia",1,1,3,35
+"Jordan",2,1,"Colombia",2,2,4,35
+"Argentina",12,3,"Haiti",11,2,5,35
+"Austria",8,3,"Egypt",6,3,6,35
+"Costa Rica",12,1,"Italy",10,3,7,35
+"South Africa",1,2,"Mexico",2,3,8,35
+"South Africa",12,1,"Germany",3,3,1,36
+"Belgium",7,2,"Cameroon",2,2,2,36
+"Jordan",6,3,"Ghana",11,2,3,36
+"Canada",3,2,"Iran",2,3,4,36
+"Croatia",10,3,"Qatar",3,1,5,36
+"Australia",4,1,"Egypt",6,1,6,36
+"Uzbekistan",8,1,"Haiti",5,2,7,36
+"Paraguay",8,2,"Panama",4,2,8,36
+"Norway",8,1,"Haiti",4,1,1,37
+"Poland",3,3,"Panama",12,1,2,37
+"Portugal",6,2,"United States",1,2,3,37
+"Saudi Arabia",2,3,"Algeria",2,2,4,37
+"Canada",3,2,"Egypt",9,2,5,37
+"Jordan",9,3,"Denmark",8,2,6,37
+"Senegal",12,2,"Paraguay",11,2,7,37
+"Qatar",3,1,"Cameroon",10,2,8,37
+"Ecuador",12,3,"Jamaica",12,1,1,38
+"Haiti",7,3,"Nigeria",9,1,2,38
+"South Africa",1,1,"New Zealand",10,1,3,38
+"Morocco",3,1,"Poland",2,2,4,38
+"United States",1,2,"Saudi Arabia",9,2,5,38
+"Iran",6,3,"Chile",11,2,6,38
+"Canada",3,2,"Costa Rica",8,2,7,38
+"Algeria",5,1,"Paraguay",7,2,8,38
+"Austria",12,2,"Nigeria",10,3,1,39
+"Ghana",7,3,"Chile",10,1,2,39
+"Germany",4,3,"South Africa",8,1,3,39
+"Costa Rica",9,2,"Haiti",4,1,4,39
+"Jordan",1,2,"Egypt",4,2,5,39
+"Japan",5,1,"Cameroon",5,2,6,39
+"Panama",10,2,"Colombia",9,1,7,39
+"Senegal",2,1,"Qatar",6,1,8,39
+"Algeria",12,1,"South Africa",4,3,1,40
+"England",6,2,"Jamaica",4,1,2,40
+"Austria",12,2,"Spain",9,3,3,40
+"Brazil",11,2,"Norway",1,1,4,40
+"Haiti",5,2,"Italy",5,3,5,40
+"Panama",9,1,"Costa Rica",6,3,6,40
+"Cameroon",2,2,"Denmark",4,2,7,40
+"Egypt",9,2,"France",10,2,8,40
+"Senegal",10,1,"South Africa",1,1,1,41
+"Croatia",9,1,"Saudi Arabia",2,1,2,41
+"Korea Republic",12,3,"Qatar",8,1,3,41
+"Ghana",12,2,"Egypt",5,1,4,41
+"Iran",10,2,"Nigeria",2,2,5,41
+"Colombia",5,2,"Uzbekistan",3,2,6,41
+"Morocco",4,2,"Denmark",7,1,7,41
+"Algeria",7,2,"Haiti",4,1,8,41
+"Algeria",12,3,"Jamaica",4,1,1,42
+"Panama",11,3,"Haiti",5,1,2,42
+"Cameroon",2,1,"Croatia",8,2,3,42
+"United States",1,1,"Austria",12,2,4,42
+"Chile",4,2,"Qatar",10,1,5,42
+"Italy",10,3,"Denmark",3,3,6,42
+"New Zealand",1,2,"Egypt",9,2,7,42
+"Brazil",9,1,"Australia",7,1,8,42
+"Belgium",10,3,"Jordan",9,1,1,43
+"New Zealand",3,3,"Korea Republic",6,1,2,43
+"Croatia",1,3,"United States",1,2,3,43
+"England",12,3,"Cameroon",5,3,4,43
+"Costa Rica",6,2,"Jamaica",9,2,5,43
+"South Africa",11,3,"France",11,2,6,43
+"Switzerland",2,2,"Saudi Arabia",1,1,7,43
+"Canada",3,1,"Australia",12,2,8,43
+"Croatia",6,1,"Denmark",8,3,1,44
+"Cameroon",3,3,"Chile",1,3,2,44
+"Panama",5,2,"Qatar",2,1,3,44
+"Costa Rica",11,3,"Scotland",4,1,4,44
+"Ghana",9,2,"Switzerland",12,1,5,44
+"Wales",10,2,"New Zealand",7,3,6,44
+"Ecuador",12,2,"Mexico",2,2,7,44
+"Tunisia",7,1,"Canada",3,2,8,44
+"Poland",8,1,"Scotland",3,1,1,45
+"Denmark",10,3,"Canada",3,3,2,45
+"Egypt",6,2,"Cameroon",10,1,3,45
+"Jamaica",4,2,"Nigeria",9,2,4,45
+"Senegal",1,3,"Austria",9,1,5,45
+"Germany",11,2,"Uruguay",6,3,6,45
+"Wales",2,3,"United States",1,2,7,45
+"Costa Rica",6,1,"Colombia",12,2,8,45
+"Italy",11,3,"Cameroon",10,3,1,46
+"Canada",3,1,"Netherlands",1,3,2,46
+"Qatar",12,3,"Ecuador",2,1,3,46
+"Jordan",1,2,"New Zealand",11,1,4,46
+"Chile",8,2,"Paraguay",11,2,5,46
+"Ghana",3,2,"Brazil",10,1,6,46
+"Korea Republic",6,1,"Haiti",6,2,7,46
+"Argentina",7,2,"Uruguay",9,1,8,46
+"South Africa",7,1,"Scotland",2,1,1,47
+"Ghana",6,1,"Iran",6,3,2,47
+"Croatia",7,3,"Saudi Arabia",12,1,3,47
+"Nigeria",8,1,"Algeria",12,3,4,47
+"Korea Republic",10,2,"Australia",7,2,5,47
+"Canada",3,3,"Jamaica",11,1,6,47
+"Paraguay",4,1,"Austria",6,2,7,47
+"Qatar",3,1,"Costa Rica",5,2,8,47
+"Ghana",2,1,"Norway",8,1,1,48
+"Tunisia",10,1,"Panama",5,2,2,48
+"Algeria",5,1,"Costa Rica",9,1,3,48
+"Switzerland",3,3,"Netherlands",2,2,4,48
+"Wales",6,2,"Australia",6,3,5,48
+"Portugal",5,3,"Poland",9,2,6,48
+"Argentina",4,2,"United States",1,2,7,48
+"New Zealand",8,2,"Haiti",12,2,8,48
+"Brazil",4,2,"Costa Rica",12,3,1,49
+"New Zealand",8,1,"Wales",6,3,2,49
+"Paraguay",2,2,"Germany",9,1,3,49
+"Netherlands",11,3,"Morocco",9,2,4,49
+"Iran",3,1,"Canada",3,3,5,49
+"Norway",12,2,"Jordan",9,3,6,49
+"Uzbekistan",6,2,"Austria",2,3,7,49
+"Colombia",1,3,"Ghana",10,2,8,49
+"Canada",3,1,"Haiti",5,1,1,50
+"Uzbekistan",7,1,"New Zealand",11,1,2,50
+"Jamaica",4,1,"Croatia",2,3,3,50
+"Italy",12,2,"Ghana",8,1,4,50
+"Nigeria",1,2,"Cameroon",2,1,5,50
+"Jordan",10,1,"Portugal",4,3,6,50
+"France",11,2,"Germany",4,2,7,50
+"Iran",12,1,"Norway",10,2,8,50
+"Iran",11,1,"Haiti",10,2,1,51
+"Costa Rica",4,1,"Austria",9,1,2,51
+"France",9,3,"Japan",2,3,3,51
+"Wales",8,1,"Cameroon",12,2,4,51
+"Qatar",3,2,"Nigeria",4,2,5,51
+"Senegal",5,1,"Canada",3,1,6,51
+"South Africa",2,1,"Uzbekistan",6,1,7,51
+"Morocco",6,2,"Ghana",9,2,8,51
+"Saudi Arabia",10,1,"Uzbekistan",7,3,1,52
+"United States",1,2,"Senegal",4,3,2,52
+"Mexico",2,3,"Scotland",1,1,3,52
+"Cameroon",12,2,"Tunisia",6,2,4,52
+"Egypt",9,3,"Argentina",7,2,5,52
+"Paraguay",8,3,"Jordan",5,2,6,52
+"Uruguay",4,2,"Jamaica",7,1,7,52
+"Qatar",3,2,"Wales",9,1,8,52
+"Jordan",5,3,"Korea Republic",11,1,1,53
+"Norway",7,1,"Cameroon",11,3,2,53
+"Scotland",8,1,"Mexico",2,1,3,53
+"South Africa",6,3,"Paraguay",6,1,4,53
+"Argentina",5,2,"Uzbekistan",3,1,5,53
+"Australia",2,2,"Chile",1,3,6,53
+"Morocco",3,2,"Costa Rica",4,2,7,53
+"Ghana",12,2,"Algeria",1,1,8,53
+"Canada",3,1,"Croatia",5,3,1,54
+"Netherlands",10,3,"Qatar",11,1,2,54
+"Japan",3,3,"Scotland",10,2,3,54
+"Australia",6,2,"Panama",5,2,4,54
+"Austria",1,1,"Switzerland",7,2,5,54
+"Algeria",5,1,"Iran",12,2,6,54
+"Nigeria",2,3,"Jordan",2,2,7,54
+"Costa Rica",6,3,"Chile",4,3,8,54
+"Haiti",12,1,"Iran",7,3,1,55
+"Portugal",4,1,"Ghana",7,1,2,55
+"Cameroon",8,1,"Japan",1,1,3,55
+"Australia",4,2,"Italy",10,3,4,55
+"Tunisia",5,3,"Chile",9,2,5,55
+"Jamaica",5,2,"New Zealand",1,3,6,55
+"Egypt",11,3,"Saudi Arabia",5,1,7,55
+"Canada",3,2,"Uzbekistan",11,1,8,55
+"Japan",9,3,"Iran",4,1,1,56
+"Scotland",6,1,"New Zealand",8,1,2,56
+"Austria",10,3,"Algeria",5,3,3,56
+"Poland",12,2,"Australia",12,1,4,56
+"Argentina",9,2,"Egypt",1,2,5,56
+"Chile",8,2,"Belgium",10,2,6,56
+"Spain",11,2,"Costa Rica",7,3,7,56
+"Costa Rica",7,2,"England",5,2,8,56
+"Korea Republic",10,3,"Jordan",1,3,1,57
+"Ecuador",11,2,"Switzerland",9,1,2,57
+"Costa Rica",10,1,"Haiti",5,2,3,57
+"England",5,1,"Croatia",10,2,4,57
+"Argentina",9,3,"Egypt",7,1,5,57
+"Panama",7,2,"Brazil",6,3,6,57
+"Tunisia",3,3,"Ghana",8,1,7,57
+"Iran",12,2,"Canada",3,2,8,57
+"Japan",3,1,"Switzerland",5,1,1,58
+"Haiti",4,1,"Norway",12,3,2,58
+"Chile",12,2,"Brazil",10,1,3,58
+"New Zealand",2,2,"Uruguay",4,2,4,58
+"Egypt",6,2,"Jordan",1,1,5,58
+"Belgium",9,3,"Netherlands",11,3,6,58
+"Panama",7,2,"Iran",9,1,7,58
+"Jamaica",11,1,"Cameroon",8,2,8,58
+"New Zealand",10,3,"Paraguay",3,1,1,59
+"Uzbekistan",6,2,"Egypt",10,1,2,59
+"Jamaica",6,1,"United States",1,1,3,59
+"South Africa",8,2,"Panama",7,3,4,59
+"Tunisia",6,3,"Netherlands",10,2,5,59
+"Costa Rica",11,2,"Cameroon",1,3,6,59
+"Norway",4,3,"Morocco",7,1,7,59
+"Saudi Arabia",9,1,"Korea Republic",1,2,8,59
+"Chile",6,1,"Switzerland",5,1,1,60
+"Ghana",2,3,"Brazil",4,1,2,60
+"Jamaica",4,2,"Korea Republic",12,1,3,60
+"Senegal",8,3,"Ecuador",3,2,4,60
+"Colombia",10,3,"Uzbekistan",5,2,5,60
+"Canada",3,3,"Egypt",10,2,6,60
+"Jordan",7,1,"Spain",9,2,7,60
+"Australia",8,2,"Germany",2,2,8,60
+"Norway",5,3,"Cameroon",8,1,1,61
+"Tunisia",9,1,"Chile",6,2,2,61
+"Nigeria",6,3,"Panama",11,3,3,61
+"Austria",3,1,"Belgium",4,3,4,61
+"Croatia",11,1,"New Zealand",9,2,5,61
+"Colombia",8,2,"Morocco",3,3,6,61
+"Scotland",4,1,"Haiti",4,2,7,61
+"South Africa",2,2,"Ecuador",3,2,8,61
+"Australia",10,3,"Morocco",11,1,1,62
+"Jamaica",4,3,"Haiti",5,1,2,62
+"Switzerland",1,1,"Cameroon",12,2,3,62
+"Denmark",4,1,"South Africa",10,2,4,62
+"Uzbekistan",9,3,"Canada",3,1,5,62
+"Ghana",7,1,"Scotland",5,2,6,62
+"Qatar",1,2,"New Zealand",3,3,7,62
+"Algeria",9,1,"Tunisia",8,1,8,62
+"Jamaica",6,3,"Qatar",2,1,1,63
+"Senegal",10,1,"Costa Rica",4,1,2,63
+"Tunisia",1,3,"Uzbekistan",8,2,3,63
+"Denmark",7,2,"Jordan",11,3,4,63
+"New Zealand",10,2,"Colombia",9,3,5,63
+"Ghana",5,2,"United States",1,1,6,63
+"Netherlands",3,1,"Iran",3,2,7,63
+"Brazil",7,1,"Egypt",11,2,8,63
+"England",5,1,"South Africa",3,1,1,64
+"Austria",11,3,"Germany",8,1,2,64
+"Qatar",12,1,"Ghana",9,2,3,64
+"Uzbekistan",8,2,"Chile",12,2,4,64
+"Japan",2,2,"Egypt",1,3,5,64
+"Canada",3,3,"Colombia",9,3,6,64
+"Argentina",6,3,"Costa Rica",7,1,7,64
+"Haiti",4,2,"Cameroon",6,1,8,64
+"Iran",6,3,"Egypt",10,3,1,65
+"Jordan",9,2,"Panama",11,2,2,65
+"Scotland",2,2,"France",11,1,3,65
+"Belgium",6,1,"Japan",4,1,4,65
+"Costa Rica",5,1,"Ecuador",3,1,5,65
+"Colombia",10,2,"Cameroon",6,2,6,65
+"Poland",7,2,"Switzerland",2,3,7,65
+"Argentina",9,3,"Ghana",12,2,8,65
+"Costa Rica",4,3,"Japan",10,3,1,66
+"Senegal",4,1,"Austria",7,2,2,66
+"Croatia",11,1,"Korea Republic",5,2,3,66
+"Denmark",2,1,"Saudi Arabia",11,2,4,66
+"Jamaica",8,3,"Jordan",2,2,5,66
+"Scotland",6,2,"Panama",7,1,6,66
+"Algeria",12,2,"Belgium",10,1,7,66
+"Ecuador",12,1,"Netherlands",9,2,8,66
+"Algeria",11,1,"Jamaica",4,1,1,67
+"Chile",8,1,"Colombia",7,1,2,67
+"Norway",12,3,"Panama",9,2,3,67
+"Haiti",6,1,"Portugal",4,2,4,67
+"Nigeria",3,3,"Cameroon",12,1,5,67
+"Japan",2,2,"Canada",3,1,6,67
+"Saudi Arabia",3,2,"Ecuador",10,2,7,67
+"Switzerland",6,2,"Australia",10,1,8,67
+"Paraguay",10,3,"Jamaica",9,1,1,68
+"Scotland",3,3,"Tunisia",3,1,2,68
+"Belgium",6,3,"Jordan",3,2,3,68
+"Saudi Arabia",6,1,"United States",1,2,4,68
+"Germany",12,3,"Austria",9,2,5,68
+"Haiti",11,2,"Ghana",8,2,6,68
+"Nigeria",4,2,"South Africa",9,3,7,68
+"Cameroon",1,1,"Egypt",5,2,8,68
+"New Zealand",11,2,"Iran",2,1,1,69
+"Spain",10,2,"Austria",7,1,2,69
+"Ghana",4,2,"Scotland",11,1,3,69
+"South Africa",1,1,"United States",1,2,4,69
+"Uruguay",11,3,"Belgium",5,3,5,69
+"Jamaica",4,3,"Costa Rica",6,3,6,69
+"France",6,1,"Algeria",3,2,7,69
+"Egypt",10,1,"Haiti",8,2,8,69
+"Haiti",7,1,"Nigeria",1,3,1,70
+"Saudi Arabia",12,2,"Italy",11,3,2,70
+"Egypt",12,1,"Panama",5,3,3,70
+"Norway",5,2,"Iran",10,1,4,70
+"Poland",7,2,"Ghana",10,2,5,70
+"South Africa",2,3,"England",5,1,6,70
+"Costa Rica",6,1,"Australia",8,1,7,70
+"Spain",9,2,"Switzerland",1,2,8,70
+"Cameroon",5,1,"Paraguay",9,1,1,71
+"Switzerland",8,2,"Ghana",10,1,2,71
+"Australia",7,3,"Uzbekistan",3,1,3,71
+"New Zealand",12,2,"Denmark",11,3,4,71
+"Ecuador",2,1,"Tunisia",4,2,5,71
+"Jamaica",4,1,"Costa Rica",7,1,6,71
+"Scotland",2,3,"Canada",3,2,7,71
+"Jordan",1,2,"Colombia",6,1,8,71
+"Senegal",3,1,"Jordan",6,1,1,72
+"Norway",7,1,"Costa Rica",9,3,2,72
+"Cameroon",7,3,"Poland",10,3,3,72
+"Italy",12,3,"South Africa",2,2,4,72
+"Canada",3,2,"Ghana",8,1,5,72
+"Japan",9,2,"Egypt",4,2,6,72
+"Croatia",12,2,"Saudi Arabia",10,1,7,72
+"Haiti",4,1,"England",5,1,8,72
+"Haiti",5,2,"Croatia",12,2,1,73
+"Wales",9,2,"France",8,2,2,73
+"England",9,1,"Nigeria",1,1,3,73
+"Switzerland",11,1,"Canada",3,1,4,73
+"Portugal",7,3,"Colombia",5,3,5,73
+"Poland",4,2,"Mexico",2,2,6,73
+"Jamaica",12,3,"Scotland",7,1,7,73
+"Brazil",10,3,"Korea Republic",9,3,8,73
+"France",8,3,"Algeria",7,3,1,74
+"Costa Rica",7,1,"Norway",3,3,2,74
+"Japan",6,1,"Brazil",9,2,3,74
+"Austria",11,1,"Poland",12,3,4,74
+"Spain",10,3,"South Africa",6,2,5,74
+"Korea Republic",4,2,"United States",1,3,6,74
+"Belgium",6,3,"New Zealand",1,2,7,74
+"Iran",8,2,"Egypt",11,2,8,74
+"Portugal",7,3,"Germany",7,1,1,75
+"Egypt",6,2,"Japan",2,3,2,75
+"Colombia",12,3,"Scotland",12,1,3,75
+"Switzerland",5,3,"Canada",3,1,4,75
+"Wales",2,2,"Ghana",11,2,5,75
+"Nigeria",5,2,"South Africa",7,2,6,75
+"Iran",9,1,"Jordan",12,2,7,75
+"Chile",1,2,"Uzbekistan",3,2,8,75
+"Jordan",10,3,"Tunisia",9,3,1,76
+"Ecuador",11,1,"Nigeria",10,1,2,76
+"South Africa",2,2,"Japan",3,1,3,76
+"United States",1,1,"Norway",12,3,4,76
+"Panama",7,2,"Colombia",3,2,5,76
+"Croatia",12,2,"Brazil",6,2,6,76
+"Saudi Arabia",9,1,"Poland",1,2,7,76
+"Canada",3,3,"Wales",6,1,8,76
+"Austria",4,3,"Germany",8,3,1,77
+"Norway",11,1,"Qatar",2,1,2,77
+"Cameroon",3,3,"England",10,2,3,77
+"Jordan",9,2,"Paraguay",2,2,4,77
+"Iran",7,2,"Belgium",12,3,5,77
+"Panama",6,1,"Colombia",6,2,6,77
+"Italy",8,1,"Uzbekistan",11,2,7,77
+"Canada",3,1,"Jamaica",4,2,8,77
+"Algeria",7,1,"Wales",3,1,1,78
+"Chile",5,2,"Morocco",1,2,2,78
+"South Africa",9,2,"Panama",8,2,3,78
+"Costa Rica",12,2,"Denmark",9,1,4,78
+"Japan",2,2,"Ghana",10,2,5,78
+"Germany",11,1,"Saudi Arabia",1,3,6,78
+"Scotland",11,3,"Croatia",8,3,7,78
+"Tunisia",2,3,"Ecuador",11,2,8,78
+"Senegal",7,1,"South Africa",8,1,1,79
+"Uzbekistan",11,1,"Japan",2,1,2,79
+"Canada",3,2,"Cameroon",10,3,3,79
+"Ghana",12,1,"Iran",4,2,4,79
+"Ecuador",2,2,"Jordan",3,1,5,79
+"Jamaica",12,2,"New Zealand",7,2,6,79
+"Saudi Arabia",9,2,"Colombia",1,1,7,79
+"Paraguay",10,1,"Germany",5,2,8,79
+"Egypt",6,1,"Costa Rica",7,1,1,80
+"England",10,1,"Ecuador",2,2,2,80
+"Norway",5,1,"Algeria",11,1,3,80
+"Haiti",6,2,"Wales",4,3,4,80
+"Australia",12,3,"Senegal",5,3,5,80
+"South Africa",3,3,"Korea Republic",3,2,6,80
+"Cameroon",10,3,"New Zealand",11,2,7,80
+"Jamaica",4,2,"Panama",5,2,8,80
+"Qatar",11,3,"Ecuador",12,3,1,81
+"Spain",5,3,"Cameroon",8,1,2,81
+"Chile",4,2,"Netherlands",7,1,3,81
+"Germany",12,2,"Jamaica",11,1,4,81
+"Argentina",6,3,"Canada",3,2,5,81
+"Algeria",6,2,"Switzerland",6,1,6,81
+"Egypt",1,1,"Costa Rica",4,1,7,81
+"Uruguay",8,2,"Jordan",2,2,8,81
+"Panama",4,1,"Morocco",9,1,1,82
+"France",6,3,"Argentina",12,3,2,82
+"Jordan",12,1,"Norway",12,2,3,82
+"Canada",3,3,"Wales",9,2,4,82
+"Iran",7,3,"Algeria",5,2,5,82
+"Spain",10,3,"Chile",6,2,6,82
+"Uruguay",5,1,"Switzerland",1,1,7,82
+"Ecuador",1,2,"Senegal",2,2,8,82
+"Senegal",6,3,"Japan",11,1,1,83
+"Jordan",12,2,"Iran",5,1,2,83
+"Croatia",8,3,"Belgium",7,3,3,83
+"Paraguay",8,1,"Uruguay",10,1,4,83
+"Egypt",1,3,"Austria",11,2,5,83
+"Poland",10,3,"Cameroon",7,1,6,83
+"United States",1,2,"Mexico",2,2,7,83
+"Canada",3,3,"Haiti",6,2,8,83
+"Paraguay",5,1,"Ghana",12,1,1,84
+"Argentina",6,1,"Croatia",7,3,2,84
+"Mexico",2,3,"Iran",9,2,3,84
+"Uzbekistan",7,1,"Canada",3,2,4,84
+"South Africa",10,1,"Tunisia",3,1,5,84
+"Jordan",1,3,"Spain",4,2,6,84
+"Denmark",8,2,"Panama",6,2,7,84
+"Egypt",2,2,"Austria",1,2,8,84
+"Argentina",8,2,"Norway",8,1,1,85
+"Canada",3,1,"South Africa",7,3,2,85
+"Uzbekistan",4,1,"New Zealand",6,1,3,85
+"England",5,1,"Australia",7,1,4,85
+"Korea Republic",6,2,"Switzerland",1,3,5,85
+"Chile",10,3,"Ecuador",2,3,6,85
+"Colombia",12,2,"United States",1,1,7,85
+"Iran",2,1,"Poland",4,2,8,85
+"New Zealand",1,1,"Uzbekistan",4,1,1,86
+"Scotland",7,1,"South Africa",10,1,2,86
+"Australia",1,2,"Colombia",6,1,3,86
+"Denmark",12,1,"Austria",2,1,4,86
+"Egypt",2,2,"Costa Rica",11,2,5,86
+"Germany",3,2,"Jamaica",4,2,6,86
+"Ecuador",12,2,"Nigeria",6,3,7,86
+"Morocco",5,2,"Algeria",8,2,8,86
+"Senegal",2,1,"United States",1,3,1,87
+"Saudi Arabia",8,1,"Norway",12,2,2,87
+"Qatar",12,3,"Croatia",8,2,3,87
+"Austria",4,2,"Jordan",1,2,4,87
+"Canada",3,2,"Argentina",7,2,5,87
+"Cameroon",11,3,"Algeria",8,3,6,87
+"Japan",6,3,"Belgium",6,2,7,87
+"Poland",1,1,"Costa Rica",4,1,8,87
+"France",5,1,"Canada",3,1,1,88
+"Portugal",7,3,"Jamaica",8,1,2,88
+"Panama",9,1,"Australia",1,1,3,88
+"Korea Republic",2,1,"Jordan",3,2,4,88
+"Algeria",11,3,"Qatar",4,1,5,88
+"Iran",10,3,"New Zealand",8,2,6,88
+"Austria",9,2,"Egypt",4,2,7,88
+"Senegal",2,3,"Haiti",12,1,8,88
+"Poland",6,3,"Cameroon",8,3,1,89
+"Morocco",9,2,"Canada",3,2,2,89
+"Nigeria",6,2,"Uruguay",6,1,3,89
+"Ghana",3,1,"Ecuador",2,3,4,89
+"Austria",2,2,"Costa Rica",10,1,5,89
+"Uzbekistan",1,2,"Algeria",7,3,6,89
+"Tunisia",10,3,"Australia",2,1,7,89
+"Haiti",7,1,"Paraguay",1,1,8,89
+"Iran",5,1,"Costa Rica",11,3,1,90
+"England",5,3,"New Zealand",1,3,2,90
+"Egypt",11,2,"Argentina",7,1,3,90
+"Austria",4,2,"Panama",4,3,4,90
+"Cameroon",3,3,"Algeria",7,2,5,90
+"United States",1,2,"Japan",8,2,6,90
+"Switzerland",8,1,"Saudi Arabia",6,2,7,90
+"Korea Republic",10,1,"South Africa",10,2,8,90
+"Norway",7,1,"Austria",6,3,1,91
+"Ghana",1,3,"Morocco",12,3,2,91
+"Uruguay",7,2,"Uzbekistan",5,1,3,91
+"Canada",3,2,"Algeria",9,1,4,91
+"Switzerland",3,3,"Argentina",8,2,5,91
+"Haiti",9,2,"Cameroon",11,1,6,91
+"Iran",1,2,"Egypt",8,1,7,91
+"Ecuador",3,1,"Portugal",12,2,8,91
+"Norway",5,3,"France",10,1,1,92
+"Poland",6,3,"Jordan",1,2,2,92
+"Iran",10,3,"England",8,3,3,92
+"Paraguay",8,2,"Portugal",9,3,4,92
+"South Africa",6,2,"Jamaica",4,2,5,92
+"Mexico",2,2,"Colombia",7,2,6,92
+"Panama",10,2,"Scotland",11,1,7,92
+"Uzbekistan",9,2,"Spain",12,2,8,92
+"Germany",2,1,"Iran",10,1,1,93
+"Cameroon",11,1,"Poland",6,2,2,93
+"Japan",4,1,"Qatar",1,3,3,93
+"Argentina",12,3,"Croatia",12,1,4,93
+"Belgium",10,2,"Ecuador",8,2,5,93
+"Uzbekistan",3,1,"Scotland",1,2,6,93
+"Morocco",3,2,"Ghana",6,3,7,93
+"Uruguay",5,2,"Jamaica",9,2,8,93
+"South Africa",1,1,"Canada",3,1,1,94
+"Nigeria",10,2,"Colombia",5,1,2,94
+"Morocco",7,3,"Jordan",3,2,3,94
+"Cameroon",9,3,"Wales",11,1,4,94
+"Iran",5,2,"Ghana",12,1,5,94
+"Switzerland",1,3,"Korea Republic",1,2,6,94
+"Jamaica",6,2,"Scotland",4,3,7,94
+"Australia",12,2,"Paraguay",9,1,8,94
+"Denmark",6,1,"Saudi Arabia",3,1,1,95
+"Haiti",10,1,"Panama",11,1,2,95
+"Austria",8,2,"Iran",8,1,3,95
+"Germany",2,2,"Portugal",5,3,4,95
+"Spain",12,3,"Jordan",5,2,5,95
+"Belgium",9,3,"Paraguay",7,2,6,95
+"Costa Rica",12,1,"Poland",12,2,7,95
+"Australia",1,1,"Norway",10,2,8,95
+"Costa Rica",6,1,"Brazil",6,3,1,96
+"Haiti",11,1,"Qatar",9,3,2,96
+"Egypt",3,1,"South Africa",4,1,3,96
+"Morocco",9,1,"Scotland",6,2,4,96
+"Austria",3,2,"Chile",9,2,5,96
+"Colombia",10,1,"Ghana",10,2,6,96
+"Mexico",2,1,"Saudi Arabia",7,1,7,96
+"Ecuador",1,2,"Panama",5,1,8,96
+"Ecuador",1,1,"Korea Republic",1,2,1,97
+"Jamaica",4,1,"Colombia",12,1,2,97
+"Haiti",5,1,"Costa Rica",6,1,3,97
+"Iran",9,1,"Chile",10,2,4,97
+"Saudi Arabia",7,1,"Australia",8,1,5,97
+"Egypt",10,3,"Netherlands",11,1,6,97
+"Scotland",5,2,"Morocco",6,2,7,97
+"Mexico",2,2,"Ghana",8,2,8,97
+"Uzbekistan",3,2,"Haiti",7,3,1,98
+"Saudi Arabia",10,1,"Croatia",2,3,2,98
+"Tunisia",9,1,"Nigeria",11,1,3,98
+"Panama",9,3,"Jordan",5,1,4,98
+"Chile",7,1,"Colombia",12,1,5,98
+"Argentina",6,2,"South Africa",6,1,6,98
+"Jamaica",8,3,"Ghana",2,2,7,98
+"Austria",8,1,"Morocco",5,2,8,98
+"Ecuador",12,1,"Jordan",4,1,1,99
+"Austria",9,1,"Chile",1,1,2,99
+"Costa Rica",5,3,"Australia",3,3,3,99
+"Paraguay",10,3,"Japan",9,3,4,99
+"Netherlands",8,3,"Scotland",2,2,5,99
+"Egypt",5,1,"Brazil",11,2,6,99
+"Haiti",6,1,"Korea Republic",7,1,7,99
+"United States",1,2,"Tunisia",10,2,8,99
+"Austria",12,3,"Ecuador",1,1,1,100
+"South Africa",12,1,"Uzbekistan",2,1,2,100
+"Saudi Arabia",8,1,"Australia",3,3,3,100
+"Chile",11,2,"Costa Rica",9,3,4,100
+"Uruguay",9,1,"Norway",11,1,5,100
+"Croatia",4,3,"Germany",5,1,6,100
+"Ghana",5,2,"Haiti",6,1,7,100
+"Korea Republic",6,2,"Morocco",10,1,8,100

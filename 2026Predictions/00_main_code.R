@@ -19,7 +19,7 @@ source(paste0(path,'soccer_shuffling_groups_v2.R'))
 
 # [GET MATCHES] Get group matches for each simulation
 # generates group_df and saves in the csv group_df.csv
-n_simulations <- 2
+n_simulations <- 100
 group_df <- get_n_groups(qualified_teams,n_simulations)
 head(group_df)
 write.csv(group_df,paste0(path,'group_df.csv'),row.names = FALSE)
