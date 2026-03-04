@@ -2,15 +2,15 @@ path <- '/Users/duda/Documents/World_Cup/'
 
 countries_on_round_16 <- read.csv(paste0(path,'classification_round_16.csv'))
 
-# Rank 1 is top, rank 2 is runner up 
+# Rank 1 is top, rank 2 is runner up
 
-# Having the teams going to the next ground, make a table filled with the round of 16 matches 
+# Having the teams going to the next ground, make a table filled with the round of 16 matches
 
 # Group 1 winner plays group 2 runner up (1,4)
 # Group 3 winner plays group 4 runner up (5,8)
 # Group 5 winner plays group 6 runner up (9,12)
 # Group 7 winner plays group 8 runner up (13,16)
-# 
+#
 # Group 1 runner up plays group 2 winner (2,3)
 # Group 3 runner up plays group 4 winner (6,7)
 # Group 5 runner up plays group 6 winner (10,11)

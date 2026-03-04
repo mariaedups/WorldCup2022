@@ -1,0 +1,5 @@
+"","team","opp_team","stage_num","year","simulation","diff_elo","avg_goals_scored","avg_opp_goals_taken","team_has_home_advt","group_team","group_opp_team","match_num_semi","predictions_sim","pred_for_opp_team","sorted_names"
+"1","Italy","Iran",5,2026,1,235,1.74007220216607,0.785597381342062,0,5,6,1,0,4,"aaiilnrty"
+"3","Uzbekistan","Panama",5,2026,1,15,1.7248322147651,1.58070866141732,-1,2,7,2,2,1,"aaaabeikmnnpstuz"
+"5","Uzbekistan","Colombia",5,2026,2,-346,1.7248322147651,1.18900343642612,0,2,9,1,0,2,"aabbceiiklmnoostuz"
+"6","Panama","Nigeria",5,2026,2,-135,1.17716535433071,1.02660406885759,1,6,2,2,1,1,"aaaaegiimnnpr"
