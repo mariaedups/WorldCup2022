@@ -2,18 +2,8 @@ import React, { useState } from 'react';
 
 export const Chapter4: React.FC = () => {
   const [simulationStep, setSimulationStep] = useState<number>(0);
-  const [matchScores, setMatchScores] = useState<number[][]>([
-    [0, 0], [0, 0], [0, 0]
-  ]);
 
   const handleSimulate = () => {
-    if (simulationStep === 0) {
-      setMatchScores([
-        [Math.floor(Math.random() * 3), Math.floor(Math.random() * 3)],
-        [Math.floor(Math.random() * 3), Math.floor(Math.random() * 3)],
-        [Math.floor(Math.random() * 3), Math.floor(Math.random() * 3)]
-      ]);
-    }
     setSimulationStep((prev) => (prev >= 4 ? 0 : prev + 1));
   };
 
@@ -128,11 +118,11 @@ export const Chapter4: React.FC = () => {
                     <div className="flex justify-between font-mono text-[10px] mb-2 opacity-50 uppercase"><span>R16 - Match {i+2}</span></div>
                     <div className="flex items-center justify-between mb-1">
                       <span className="font-mono text-sm">{simulationStep >= 1 ? t1 : 'TBD'}</span>
-                      <span className="font-mono opacity-50">{simulationStep >= 2 ? matchScores[i][0] : '-'}</span>
+                      <span className="font-mono opacity-50">{simulationStep >= 2 ? match.score1 : '-'}</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-sm">{simulationStep >= 1 ? t2 : 'TBD'}</span>
-                      <span className="font-mono opacity-50">{simulationStep >= 2 ? matchScores[i][1] : '-'}</span>
+                      <span className="font-mono opacity-50">{simulationStep >= 2 ? match.score1 : '-'}</span>
                     </div>
                   </div>
                 )
