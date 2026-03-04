@@ -1,9 +1,6 @@
 # Path
 path = './'
 
-# Run the update data script to generate/retrain the final_model
-source(paste0(path,'update_data.R'))
-
 # Import the trained model that used World Cups 1960 - 2022
 model_sim <- readRDS(paste0(path,'final_model'))
 summary(model_sim)
