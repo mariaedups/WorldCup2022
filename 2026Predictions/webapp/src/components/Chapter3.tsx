@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { useSimulation } from '../SimulationContext';
 
 const HIGHLIGHTS = [
-  "USA starts strong in Group A with a +4 GD.",
-  "France dominates Group D, securing 9 points early.",
-  "Italy remains unbeaten in Group J with a +5 GD.",
-  "Spain and England show clinical precision, both topping their groups with 7 and 9 points.",
-  "Chaos in Group F as Morocco and Croatia battle for the top spot."
+  "Group phase action heats up.",
+  "Top seeds asserting their dominance early.",
+  "Underdogs fighting for every point.",
+  "The margin for error is razor thin.",
+  "Who will survive the chaos of 48?"
 ];
+
+const formatTeamName = (name: string) => {
+  return name.length > 3 ? name.substring(0, 3).toUpperCase() : name.toUpperCase();
+};
 
 const INITIAL_GROUPS = [
   {
@@ -121,9 +126,37 @@ const INITIAL_GROUPS = [
 ];
 
 export const Chapter3: React.FC = () => {
+  const { activeRun } = useSimulation();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isShuffling, setIsShuffling] = useState(false);
-  const [shufflingGroups, setShufflingGroups] = useState(INITIAL_GROUPS);
+
+  // Transform the activeRun.standings into our grouped format
+  const currentGroups = INITIAL_GROUPS.map(g => {
+    const runStandings = activeRun.standings[g.name];
+    if (runStandings && runStandings.length > 0) {
+      return {
+        ...g,
+        teams: runStandings.map((st, i) => ({
+          name: formatTeamName(st.team),
+          gd: st.gd,
+          pts: st.pts,
+          active: i < 2, // Top 2 usually advance
+          muted: i >= 2,
+          faded: i === 3
+        }))
+      };
+    }
+    return g;
+  });
+
+  const [shufflingGroups, setShufflingGroups] = useState(currentGroups);
+
+  // When activeRun changes, set new real stats
+  useEffect(() => {
+    if (!isShuffling) {
+      setShufflingGroups(currentGroups);
+    }
+  }, [activeRun, isShuffling]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -134,20 +167,16 @@ export const Chapter3: React.FC = () => {
 
   const triggerShuffle = () => {
     setIsShuffling(true);
-
-    // Simulate numbers changing randomly
     let duration = 1500;
 
-    // We update state rapidly
     const interval = setInterval(() => {
       setShufflingGroups(prevGroups =>
         prevGroups.map(g => ({
           ...g,
           teams: g.teams.map(t => ({
             ...t,
-            // Only shuffle stats for active ones or occasionally others
-            gd: t.active ? Math.floor(Math.random() * 10) : t.gd,
-            pts: t.active ? Math.floor(Math.random() * 10) : t.pts
+            gd: Math.floor(Math.random() * 10),
+            pts: Math.floor(Math.random() * 10)
           }))
         }))
       );

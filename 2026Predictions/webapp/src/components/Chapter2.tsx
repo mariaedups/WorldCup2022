@@ -1,9 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSimulation } from '../SimulationContext';
+
+const formatTeamName = (name: string) => {
+  return name.length > 3 ? name.substring(0, 3).toUpperCase() : name.toUpperCase();
+};
 
 type Team = {
   name: string;
   flag: string | null;
   host?: boolean;
+};
+
+const FLAG_MAP: Record<string, string> = {
+  'Mexico': 'https://lh3.googleusercontent.com/aida-public/AB6AXuCwyLGcc6dy0HlImE3CgLMPyRHlOejRpqBBtSH06buma5ahLrJFcB2ktF7TS_zOwb1wl9zjeJ_vPBGFUOzcJQfhZowrfWJgiplEbvDWjmGCeRhG645hd3jIb-Lnx3oG7eXIkhB6aGTlsax-SlUaia7PtFzT6lcamr75JV70id2I4B2D9n1JjmbA7897KrNSHq7jwxxonsYUdqvoxucXnSMihcQM7gJ7P3LIbWuCwqliKRBl9xrvPd5EgRMsCZa6lshjQMWvK9jdm7U',
+  'Canada': 'https://lh3.googleusercontent.com/aida-public/AB6AXuCgghIHI7dhun2guZEsbejK4nTN8u1C2MtsRgAx8FtSVD0we7q7jJP_LOcIUJUqIRbO8o5rD02LXcKGJIRPu4JWifGAxiWJZJR_rGS7r3D49sUwsbdLh6uTdIX-MDpEfsKBEj0CuLwvvBvwdMxnqZIAshh3mGBNQXZIIFTTuQaTzm310Rz_s-kya49f8G1N1-ZvXSNhUljlcwFH46LQcRptXf2c8Thnx4eVOywD1myMpEP-4zkPIENLUaDpZCVwgjxVUiWlkpg_ubw',
+  'United States': 'https://lh3.googleusercontent.com/aida-public/AB6AXuAaWnTsXWQtTKmiK17ceO_vzCzZpYroXmts--FPd3mDqWIuoJfgiVGJs03Ijdh51Wh8NyP5H9AjCE_n70Ts9LgUBQx74QlNuwCWwHqLzxydlSaTd2MuqLE3UlNEefODjzwBXHC0S-uYAlBoZXvHnCVU6BkInC0pX3ekcZOiGjagUvZwxlGT0ivSblReIQKKPbNZ5sSstK4mGwnf1GDvE3T56Mp5_jT74INIsSQLHFuyA8I7yNiXfxqiLXRYUGPDYe8j_rGaK18xcGs',
+  'Brazil': 'https://lh3.googleusercontent.com/aida-public/AB6AXuARJDGAo5HTV9694Te4ftKe6al0YexfWp-wWZMCitFsMgNpv4tLOwQB9CkEQHzes38atsFtYpPwGwiheOcihuSuzbRt4NMvDpXfIvPTb_IPXTKUUSdkkCPwEojhYewrkEyTILDuDljA1DJ1V7CHEsowvKwNIsQfSgl42FR607aZ4Qw86jfa_f20ShJfS6dviRIc-F9Dg2ZgGJJ_rukH81rOO8Pr2ErS-2uVLn_oPSr7Q2htr88ERBDMY6jLZTrBy0JSD1FkR0uhu1o',
+  'Belgium': 'https://lh3.googleusercontent.com/aida-public/AB6AXuDhOAGHgN3Gj8qCAqvFM_mNz_1p9HhO4YJe2DtxZyXj_x7jxyWEncmGwxRvX2Uktl3wyIAyWmjt7UHRIaxHCIgXowpAZT5_mFiDrD5LuiV0f0vUV8wLdRAsaULnlgv_xWAuIQMM_CVJACXi_C_d-QFbIPv8aNd-TB_YQxw0Iak8FILUvdrVIrybMF9hC4V78UWEixplA_BjybCMbzzesUHr_owqtKoKd1Ov--mm6YV03fDg875PhaQkdtHeGT24NzAIhbBAr7FfhUg',
+  'France': 'https://lh3.googleusercontent.com/aida-public/AB6AXuB1Mv702GJh3j6DpIBPwp3lkFp-KjxZDUkw5TQs8FkmxXeT_jl3U90R-hpxhFQhjM8qODQgYDCrOBGJcd21lkN7gMrfIqj3giefuCrj4UyqXKWLymj8O_iSyBeyoJwL6ztNjr-3bOaSv-EOjEXcGbzTHxeoPxyU-pCChCt8wsPBc4VdG8QrrP40FwRGvsDHesS8IBSx7v_zfJkZixOtT1gNYkCtJNJhZ5ZoaaUq9OECj0M0AH7FpJCp5O3vc-BPPObr_rFol0SpJRI',
+  'Argentina': 'https://lh3.googleusercontent.com/aida-public/AB6AXuAHLpdoswWNO5kxVamzqBPdbboXp9qBMzJyHBrf0Pz2w8LZ55xj6O9sVlSH-2J0g5bw86JRR6CxKXr2CbwCXpCONqIqvD8b3aHSPf9z4mhXLKQ357PlKtsxW24jl6nxjavKh154VRgwLSCDRYtPXtXcuSH5PAliFHlDRZChVsaZembAmOo7xLt-6L2rfkyyEaCb14GQc1xg7aNRWxbzUZ8Fejl3S5c6leTapGPVKeuLFHVnDyMgQ3S6O2YV9RWoPD3BFF-AuGXRxzM',
+  'Spain': 'https://lh3.googleusercontent.com/aida-public/AB6AXuCdBGtb0MjI9ElHQoas8fp6YFw5rQ3ZSc45jd38VGsuYqx8sEdUrGtgn_2lzzOwL-jl3Yj6xmrIvKaWWiWbWScvhQHzNRbufDjDP65DmtlkPqO2RGQo2gNYaulR0gk4OAjfaBGui7EULL0jszkOGeDjS_87OjCjFzehXp5gUGSeMypzFoLWW4IfwFDEKBGQ-EMgYvbg4g4mtvVvsPljBwDSfrIIgzSQkO4I8Fl4GC1TUKm9qPDrb5wlqcetJ_laTEcP_GBH0esSCjs',
+  'Portugal': 'https://lh3.googleusercontent.com/aida-public/AB6AXuATAgpDcJNOGPu8WtuQ3SS7ZtSz_lbjboB7Qt1alD1UDSi_B4PboHwOJnX-uCTu5QGxMLYN4SL1IxNP4_a2WT0BrM0eEm9d5DfRk0z7StInMlTKInJ1tW7MtB8oOHDeF67DV4Si-flaxz9FchZMGatmcYD5Npo_QsO109MrtTdgKF9WFoeBloNovb0UYlNi9xhprwU5-EoOHLvkBwf1jAc6BukjTgo62vGKbeliov9q__OPh6C2TAoWiZ2ncNNF6QFZ4xdC0nfbAyw',
+  'Germany': 'https://lh3.googleusercontent.com/aida-public/AB6AXuBaJe2noO1nbojIp15mCiovLcDnaGd0F-Y7-k_uocblAViNyOX7FYC8dJz2s_bZJPaG9ImP4Iu4us__6ecexyNtiRzWnuB-VysmrXCryIv8a6O2UYa1nIb5MHtyiHGa8x5e8KISOa3eWScbxPdn9CBGHSvY3OM2Phy0WXU4yN6SKRt0A7JLujZtwD7uaJX_AbhT_ADh0N-1LOxmZXll1hrNm3F1RstersOcXv3rAZqwmuh7Y4rS6Zi1pj9vSUHrSZWp_Pbb1h70iVM',
+  'England': 'https://lh3.googleusercontent.com/aida-public/AB6AXuBoEpseatdve20p0p7syJ4e-qTOrNaU7Is5Etlsov-jCke_75aIDc-pfDE5_zkrqsMEEsBiJdyUv7u0jwOmzjRa6Vb0PS_lGz-MrCUnolw16K-lftT5i0Za-hF0vBpAKxXbsYE4DWCLM8Nc5nHajZ56U_pEuejsavNEkM4ByeqBJMOm3RYygYWTfB8Lplru91lRz_TU0PiSYRTqSZmT_-JwBF38B4DjDAh9uHMy3DeMyFninYe-urioujcFgWor1lFzYTqrgMBtG0k',
 };
 
 // Using actual image paths for some teams from the prompt where available
@@ -26,27 +45,37 @@ const INITIAL_GROUPS: { id: string, teams: Team[] }[] = [
 const MOCK_TEAMS = ['SUI', 'SWE', 'CMR', 'POL', 'DEN', 'URU', 'CRO', 'SEN', 'JPN', 'MAR', 'SRB', 'KOR', 'GHA', 'PER', 'IRN', 'WAL', 'AUS', 'CRC', 'TUN', 'KSA', 'QAT', 'ECU', 'CHI', 'COL', 'CIV', 'EGY', 'PAN', 'NGA', 'TUR', 'NZL', 'ALG', 'HON', 'PAR'];
 
 export const Chapter2: React.FC = () => {
+  const { activeRun, randomizeRun } = useSimulation();
   const [isShuffling, setIsShuffling] = useState(false);
-  const [groups, setGroups] = useState(INITIAL_GROUPS);
+
+  const currentGroups = INITIAL_GROUPS.map(group => {
+    const runTeams = activeRun.groups[group.id];
+    if (runTeams && runTeams.length === 4) {
+      return {
+        ...group,
+        teams: runTeams.map((teamName, i) => ({
+          name: formatTeamName(teamName),
+          flag: FLAG_MAP[teamName] || null,
+          host: i === 0 && ['MEX', 'CAN', 'USA'].includes(formatTeamName(teamName))
+        }))
+      };
+    }
+    return group;
+  });
+
+  const [groups, setGroups] = useState(currentGroups);
+
+  useEffect(() => {
+    if (!isShuffling) {
+      setGroups(currentGroups);
+    }
+  }, [activeRun, isShuffling]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleShuffle = () => {
     setIsShuffling(true);
+    randomizeRun();
 
-    // Simulate a slot machine effect with a timeout
     setTimeout(() => {
-      // Mock randomly assigning teams
-      const shuffled = INITIAL_GROUPS.map(group => {
-        return {
-          ...group,
-          teams: group.teams.map((t, i) => {
-            if (i === 0) return t; // keep first team
-            // Pick a random team from mock list
-            const randTeam = MOCK_TEAMS[Math.floor(Math.random() * MOCK_TEAMS.length)];
-            return { name: randTeam, flag: null };
-          })
-        };
-      });
-      setGroups(shuffled);
       setIsShuffling(false);
     }, 2000);
   };

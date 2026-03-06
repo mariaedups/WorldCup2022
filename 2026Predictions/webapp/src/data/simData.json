@@ -1,0 +1,2421 @@
+{
+  "runs": [
+    {
+      "id": 1,
+      "groups": {
+        "A": [
+          "United States",
+          "Denmark",
+          "Norway",
+          "Ecuador"
+        ],
+        "B": [
+          "Mexico",
+          "Colombia",
+          "Iran",
+          "South Africa"
+        ],
+        "C": [
+          "Canada",
+          "Senegal",
+          "Paraguay",
+          "Jordan"
+        ],
+        "D": [
+          "Argentina",
+          "Netherlands",
+          "Egypt",
+          "Haiti"
+        ],
+        "E": [
+          "Uruguay",
+          "Wales",
+          "Australia",
+          "Panama"
+        ],
+        "F": [
+          "Spain",
+          "Chile",
+          "Algeria",
+          "Qatar"
+        ],
+        "G": [
+          "England",
+          "Croatia",
+          "Korea Republic",
+          "Ghana"
+        ],
+        "H": [
+          "Portugal",
+          "Germany",
+          "Scotland",
+          "Uzbekistan"
+        ],
+        "I": [
+          "Italy",
+          "Austria",
+          "Japan",
+          "Cameroon"
+        ],
+        "J": [
+          "France",
+          "Poland",
+          "Nigeria",
+          "New Zealand"
+        ],
+        "K": [
+          "Brazil",
+          "Switzerland",
+          "Morocco",
+          "Costa Rica"
+        ],
+        "L": [
+          "Belgium",
+          "Tunisia",
+          "Jamaica",
+          "Saudi Arabia"
+        ]
+      },
+      "standings": {
+        "A": [
+          {
+            "team": "United States",
+            "pts": 6,
+            "gd": 1
+          },
+          {
+            "team": "Norway",
+            "pts": 6,
+            "gd": -1
+          },
+          {
+            "team": "Ecuador",
+            "pts": 3,
+            "gd": 1
+          }
+        ],
+        "B": [
+          {
+            "team": "Mexico",
+            "pts": 9,
+            "gd": 4
+          },
+          {
+            "team": "Colombia",
+            "pts": 4,
+            "gd": 1
+          },
+          {
+            "team": "Iran",
+            "pts": 4,
+            "gd": 0
+          }
+        ],
+        "C": [
+          {
+            "team": "Paraguay",
+            "pts": 7,
+            "gd": 7
+          },
+          {
+            "team": "Canada",
+            "pts": 6,
+            "gd": 0
+          },
+          {
+            "team": "Senegal",
+            "pts": 4,
+            "gd": 2
+          }
+        ],
+        "D": [
+          {
+            "team": "Argentina",
+            "pts": 7,
+            "gd": 3
+          },
+          {
+            "team": "Netherlands",
+            "pts": 5,
+            "gd": 2
+          },
+          {
+            "team": "Haiti",
+            "pts": 3,
+            "gd": 1
+          }
+        ],
+        "E": [
+          {
+            "team": "Uruguay",
+            "pts": 7,
+            "gd": 4
+          },
+          {
+            "team": "Panama",
+            "pts": 4,
+            "gd": -2
+          }
+        ],
+        "F": [
+          {
+            "team": "Spain",
+            "pts": 9,
+            "gd": 4
+          },
+          {
+            "team": "Chile",
+            "pts": 4,
+            "gd": 0
+          },
+          {
+            "team": "Algeria",
+            "pts": 3,
+            "gd": 0
+          }
+        ],
+        "G": [
+          {
+            "team": "England",
+            "pts": 9,
+            "gd": 6
+          },
+          {
+            "team": "Croatia",
+            "pts": 4,
+            "gd": 0
+          },
+          {
+            "team": "Korea Republic",
+            "pts": 4,
+            "gd": -2
+          }
+        ],
+        "H": [
+          {
+            "team": "Germany",
+            "pts": 7,
+            "gd": 6
+          },
+          {
+            "team": "Portugal",
+            "pts": 5,
+            "gd": 4
+          },
+          {
+            "team": "Scotland",
+            "pts": 4,
+            "gd": 2
+          }
+        ],
+        "I": [
+          {
+            "team": "Italy",
+            "pts": 6,
+            "gd": 2
+          },
+          {
+            "team": "Austria",
+            "pts": 4,
+            "gd": 1
+          },
+          {
+            "team": "Japan",
+            "pts": 4,
+            "gd": -1
+          }
+        ],
+        "J": [
+          {
+            "team": "France",
+            "pts": 9,
+            "gd": 10
+          },
+          {
+            "team": "Nigeria",
+            "pts": 4,
+            "gd": -2
+          }
+        ],
+        "K": [
+          {
+            "team": "Brazil",
+            "pts": 9,
+            "gd": 8
+          },
+          {
+            "team": "Switzerland",
+            "pts": 6,
+            "gd": 1
+          }
+        ],
+        "L": [
+          {
+            "team": "Belgium",
+            "pts": 7,
+            "gd": 7
+          },
+          {
+            "team": "Jamaica",
+            "pts": 4,
+            "gd": -1
+          }
+        ]
+      },
+      "knockouts": {
+        "r32": [
+          {
+            "team1": "England",
+            "team2": "Algeria",
+            "score1": 2,
+            "score2": 0
+          },
+          {
+            "team1": "Austria",
+            "team2": "Argentina",
+            "score1": 3,
+            "score2": 4
+          },
+          {
+            "team1": "Iran",
+            "team2": "Belgium",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Scotland",
+            "team2": "Brazil",
+            "score1": 0,
+            "score2": 3
+          },
+          {
+            "team1": "Japan",
+            "team2": "Canada",
+            "score1": 0,
+            "score2": 2
+          },
+          {
+            "team1": "Paraguay",
+            "team2": "Chile",
+            "score1": 0,
+            "score2": 2
+          },
+          {
+            "team1": "Uruguay",
+            "team2": "Colombia",
+            "score1": 1,
+            "score2": 2
+          },
+          {
+            "team1": "Germany",
+            "team2": "Croatia",
+            "score1": 1,
+            "score2": 0
+          },
+          {
+            "team1": "Spain",
+            "team2": "Ecuador",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Senegal",
+            "team2": "France",
+            "score1": 1,
+            "score2": 3
+          },
+          {
+            "team1": "Mexico",
+            "team2": "Haiti",
+            "score1": 1,
+            "score2": 0
+          },
+          {
+            "team1": "Panama",
+            "team2": "Italy",
+            "score1": 1,
+            "score2": 2
+          },
+          {
+            "team1": "Norway",
+            "team2": "Jamaica",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Switzerland",
+            "team2": "Korea Republic",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Portugal",
+            "team2": "Netherlands",
+            "score1": 0,
+            "score2": 2
+          },
+          {
+            "team1": "United States",
+            "team2": "Nigeria",
+            "score1": 0,
+            "score2": 2
+          }
+        ],
+        "r16": [
+          {
+            "team1": "France",
+            "team2": "Argentina",
+            "score1": 2,
+            "score2": 1
+          },
+          {
+            "team1": "Chile",
+            "team2": "Belgium",
+            "score1": 1,
+            "score2": 2
+          },
+          {
+            "team1": "England",
+            "team2": "Brazil",
+            "score1": 2,
+            "score2": 1
+          },
+          {
+            "team1": "Jamaica",
+            "team2": "Canada",
+            "score1": 1,
+            "score2": 0
+          },
+          {
+            "team1": "Germany",
+            "team2": "Colombia",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Mexico",
+            "team2": "Ecuador",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Netherlands",
+            "team2": "Italy",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Nigeria",
+            "team2": "Korea Republic",
+            "score1": 0,
+            "score2": 0
+          }
+        ],
+        "qf": [
+          {
+            "team1": "Jamaica",
+            "team2": "Belgium",
+            "score1": 0,
+            "score2": 5
+          },
+          {
+            "team1": "France",
+            "team2": "Colombia",
+            "score1": 0,
+            "score2": 0
+          },
+          {
+            "team1": "England",
+            "team2": "Ecuador",
+            "score1": 1,
+            "score2": 0
+          },
+          {
+            "team1": "Nigeria",
+            "team2": "Italy",
+            "score1": 0,
+            "score2": 1
+          }
+        ],
+        "sf": [
+          {
+            "team1": "Italy",
+            "team2": "Belgium",
+            "score1": 2,
+            "score2": 3
+          },
+          {
+            "team1": "France",
+            "team2": "England",
+            "score1": 1,
+            "score2": 0
+          }
+        ],
+        "final": [
+          {
+            "team1": "France",
+            "team2": "Belgium",
+            "score1": 1,
+            "score2": 0
+          },
+          {
+            "team1": "Italy",
+            "team2": "England",
+            "score1": 0,
+            "score2": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "groups": {
+        "A": [
+          "United States",
+          "Croatia",
+          "Japan",
+          "New Zealand"
+        ],
+        "B": [
+          "Mexico",
+          "Denmark",
+          "Paraguay",
+          "Ghana"
+        ],
+        "C": [
+          "Canada",
+          "Tunisia",
+          "Iran",
+          "Ecuador"
+        ],
+        "D": [
+          "Brazil",
+          "Netherlands",
+          "Algeria",
+          "Panama"
+        ],
+        "E": [
+          "Portugal",
+          "Colombia",
+          "Jamaica",
+          "Saudi Arabia"
+        ],
+        "F": [
+          "Belgium",
+          "Senegal",
+          "Korea Republic",
+          "Haiti"
+        ],
+        "G": [
+          "England",
+          "Switzerland",
+          "Morocco",
+          "Jordan"
+        ],
+        "H": [
+          "Italy",
+          "Wales",
+          "Egypt",
+          "Costa Rica"
+        ],
+        "I": [
+          "France",
+          "Chile",
+          "Australia",
+          "South Africa"
+        ],
+        "J": [
+          "Argentina",
+          "Poland",
+          "Nigeria",
+          "Qatar"
+        ],
+        "K": [
+          "Spain",
+          "Germany",
+          "Norway",
+          "Uzbekistan"
+        ],
+        "L": [
+          "Uruguay",
+          "Austria",
+          "Scotland",
+          "Cameroon"
+        ]
+      },
+      "standings": {
+        "A": [
+          {
+            "team": "Croatia",
+            "pts": 9,
+            "gd": 6
+          },
+          {
+            "team": "Japan",
+            "pts": 6,
+            "gd": 2
+          },
+          {
+            "team": "United States",
+            "pts": 3,
+            "gd": -1
+          }
+        ],
+        "B": [
+          {
+            "team": "Paraguay",
+            "pts": 9,
+            "gd": 5
+          },
+          {
+            "team": "Denmark",
+            "pts": 3,
+            "gd": 3
+          },
+          {
+            "team": "Mexico",
+            "pts": 3,
+            "gd": -3
+          }
+        ],
+        "C": [
+          {
+            "team": "Ecuador",
+            "pts": 9,
+            "gd": 5
+          },
+          {
+            "team": "Iran",
+            "pts": 6,
+            "gd": 1
+          },
+          {
+            "team": "Tunisia",
+            "pts": 3,
+            "gd": -2
+          }
+        ],
+        "D": [
+          {
+            "team": "Brazil",
+            "pts": 9,
+            "gd": 3
+          },
+          {
+            "team": "Netherlands",
+            "pts": 6,
+            "gd": 4
+          },
+          {
+            "team": "Algeria",
+            "pts": 3,
+            "gd": -1
+          }
+        ],
+        "E": [
+          {
+            "team": "Colombia",
+            "pts": 7,
+            "gd": 4
+          },
+          {
+            "team": "Portugal",
+            "pts": 4,
+            "gd": 0
+          }
+        ],
+        "F": [
+          {
+            "team": "Belgium",
+            "pts": 7,
+            "gd": 8
+          },
+          {
+            "team": "Korea Republic",
+            "pts": 7,
+            "gd": 4
+          }
+        ],
+        "G": [
+          {
+            "team": "England",
+            "pts": 7,
+            "gd": 5
+          },
+          {
+            "team": "Switzerland",
+            "pts": 4,
+            "gd": 0
+          },
+          {
+            "team": "Jordan",
+            "pts": 3,
+            "gd": -3
+          }
+        ],
+        "H": [
+          {
+            "team": "Italy",
+            "pts": 9,
+            "gd": 6
+          },
+          {
+            "team": "Costa Rica",
+            "pts": 6,
+            "gd": 2
+          }
+        ],
+        "I": [
+          {
+            "team": "France",
+            "pts": 7,
+            "gd": 6
+          },
+          {
+            "team": "South Africa",
+            "pts": 4,
+            "gd": -2
+          }
+        ],
+        "J": [
+          {
+            "team": "Poland",
+            "pts": 7,
+            "gd": 2
+          },
+          {
+            "team": "Nigeria",
+            "pts": 4,
+            "gd": 0
+          },
+          {
+            "team": "Argentina",
+            "pts": 3,
+            "gd": -1
+          }
+        ],
+        "K": [
+          {
+            "team": "Spain",
+            "pts": 7,
+            "gd": 2
+          },
+          {
+            "team": "Germany",
+            "pts": 6,
+            "gd": 4
+          },
+          {
+            "team": "Norway",
+            "pts": 4,
+            "gd": 0
+          }
+        ],
+        "L": [
+          {
+            "team": "Austria",
+            "pts": 7,
+            "gd": 4
+          },
+          {
+            "team": "Uruguay",
+            "pts": 7,
+            "gd": 3
+          },
+          {
+            "team": "Scotland",
+            "pts": 3,
+            "gd": -3
+          }
+        ]
+      },
+      "knockouts": {
+        "r32": [
+          {
+            "team1": "Ecuador",
+            "team2": "Algeria",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Paraguay",
+            "team2": "Argentina",
+            "score1": 1,
+            "score2": 2
+          },
+          {
+            "team1": "Switzerland",
+            "team2": "Austria",
+            "score1": 4,
+            "score2": 1
+          },
+          {
+            "team1": "Germany",
+            "team2": "Belgium",
+            "score1": 0,
+            "score2": 2
+          },
+          {
+            "team1": "Denmark",
+            "team2": "Brazil",
+            "score1": 1,
+            "score2": 1
+          },
+          {
+            "team1": "Norway",
+            "team2": "Colombia",
+            "score1": 2,
+            "score2": 1
+          },
+          {
+            "team1": "Japan",
+            "team2": "Costa Rica",
+            "score1": 0,
+            "score2": 2
+          },
+          {
+            "team1": "United States",
+            "team2": "Croatia",
+            "score1": 0,
+            "score2": 0
+          },
+          {
+            "team1": "Portugal",
+            "team2": "England",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "South Africa",
+            "team2": "France",
+            "score1": 0,
+            "score2": 3
+          },
+          {
+            "team1": "Netherlands",
+            "team2": "Iran",
+            "score1": 2,
+            "score2": 0
+          },
+          {
+            "team1": "Tunisia",
+            "team2": "Italy",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Spain",
+            "team2": "Jordan",
+            "score1": 4,
+            "score2": 1
+          },
+          {
+            "team1": "Nigeria",
+            "team2": "Korea Republic",
+            "score1": 2,
+            "score2": 0
+          },
+          {
+            "team1": "Uruguay",
+            "team2": "Mexico",
+            "score1": 1,
+            "score2": 2
+          },
+          {
+            "team1": "Scotland",
+            "team2": "Poland",
+            "score1": 1,
+            "score2": 3
+          }
+        ],
+        "r16": [
+          {
+            "team1": "Croatia",
+            "team2": "Algeria",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Brazil",
+            "team2": "Argentina",
+            "score1": 2,
+            "score2": 2
+          },
+          {
+            "team1": "France",
+            "team2": "Belgium",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Netherlands",
+            "team2": "Costa Rica",
+            "score1": 1,
+            "score2": 0
+          },
+          {
+            "team1": "Switzerland",
+            "team2": "England",
+            "score1": 1,
+            "score2": 0
+          },
+          {
+            "team1": "Poland",
+            "team2": "Italy",
+            "score1": 2,
+            "score2": 2
+          },
+          {
+            "team1": "Spain",
+            "team2": "Mexico",
+            "score1": 1,
+            "score2": 0
+          },
+          {
+            "team1": "Norway",
+            "team2": "Nigeria",
+            "score1": 2,
+            "score2": 2
+          }
+        ],
+        "qf": [
+          {
+            "team1": "Brazil",
+            "team2": "Algeria",
+            "score1": 2,
+            "score2": 0
+          },
+          {
+            "team1": "Netherlands",
+            "team2": "Belgium",
+            "score1": 0,
+            "score2": 3
+          },
+          {
+            "team1": "Switzerland",
+            "team2": "Norway",
+            "score1": 0,
+            "score2": 0
+          },
+          {
+            "team1": "Spain",
+            "team2": "Poland",
+            "score1": 4,
+            "score2": 0
+          }
+        ],
+        "sf": [
+          {
+            "team1": "Norway",
+            "team2": "Belgium",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Spain",
+            "team2": "Brazil",
+            "score1": 1,
+            "score2": 2
+          }
+        ],
+        "final": [
+          {
+            "team1": "Brazil",
+            "team2": "Belgium",
+            "score1": 2,
+            "score2": 1
+          },
+          {
+            "team1": "Spain",
+            "team2": "Norway",
+            "score1": 2,
+            "score2": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "groups": {
+        "A": [
+          "United States",
+          "Netherlands",
+          "Algeria",
+          "Ecuador"
+        ],
+        "B": [
+          "Mexico",
+          "Tunisia",
+          "Korea Republic",
+          "New Zealand"
+        ],
+        "C": [
+          "Canada",
+          "Chile",
+          "Morocco",
+          "Saudi Arabia"
+        ],
+        "D": [
+          "Argentina",
+          "Wales",
+          "Egypt",
+          "Costa Rica"
+        ],
+        "E": [
+          "Uruguay",
+          "Austria",
+          "Nigeria",
+          "Qatar"
+        ],
+        "F": [
+          "France",
+          "Senegal",
+          "Japan",
+          "Panama"
+        ],
+        "G": [
+          "Brazil",
+          "Denmark",
+          "Jamaica",
+          "Ghana"
+        ],
+        "H": [
+          "Italy",
+          "Switzerland",
+          "Iran",
+          "Haiti"
+        ],
+        "I": [
+          "Portugal",
+          "Colombia",
+          "Norway",
+          "Uzbekistan"
+        ],
+        "J": [
+          "Spain",
+          "Croatia",
+          "Paraguay",
+          "South Africa"
+        ],
+        "K": [
+          "England",
+          "Poland",
+          "Scotland",
+          "Jordan"
+        ],
+        "L": [
+          "Belgium",
+          "Germany",
+          "Australia",
+          "Cameroon"
+        ]
+      },
+      "standings": {
+        "A": [
+          {
+            "team": "United States",
+            "pts": 7,
+            "gd": 4
+          },
+          {
+            "team": "Netherlands",
+            "pts": 5,
+            "gd": 3
+          }
+        ],
+        "B": [
+          {
+            "team": "Mexico",
+            "pts": 6,
+            "gd": 4
+          },
+          {
+            "team": "Korea Republic",
+            "pts": 6,
+            "gd": 2
+          },
+          {
+            "team": "Tunisia",
+            "pts": 6,
+            "gd": 1
+          }
+        ],
+        "C": [
+          {
+            "team": "Morocco",
+            "pts": 7,
+            "gd": 4
+          },
+          {
+            "team": "Chile",
+            "pts": 6,
+            "gd": 4
+          },
+          {
+            "team": "Saudi Arabia",
+            "pts": 3,
+            "gd": -4
+          }
+        ],
+        "D": [
+          {
+            "team": "Costa Rica",
+            "pts": 7,
+            "gd": 3
+          },
+          {
+            "team": "Argentina",
+            "pts": 5,
+            "gd": 3
+          },
+          {
+            "team": "Egypt",
+            "pts": 3,
+            "gd": 1
+          }
+        ],
+        "E": [
+          {
+            "team": "Uruguay",
+            "pts": 9,
+            "gd": 6
+          },
+          {
+            "team": "Nigeria",
+            "pts": 6,
+            "gd": 0
+          }
+        ],
+        "F": [
+          {
+            "team": "France",
+            "pts": 9,
+            "gd": 9
+          },
+          {
+            "team": "Japan",
+            "pts": 4,
+            "gd": -2
+          },
+          {
+            "team": "Japan",
+            "pts": 4,
+            "gd": -2
+          }
+        ],
+        "G": [
+          {
+            "team": "Brazil",
+            "pts": 9,
+            "gd": 7
+          },
+          {
+            "team": "Denmark",
+            "pts": 3,
+            "gd": -1
+          },
+          {
+            "team": "Jamaica",
+            "pts": 3,
+            "gd": -2
+          }
+        ],
+        "H": [
+          {
+            "team": "Italy",
+            "pts": 9,
+            "gd": 6
+          },
+          {
+            "team": "Switzerland",
+            "pts": 4,
+            "gd": 1
+          },
+          {
+            "team": "Iran",
+            "pts": 3,
+            "gd": -2
+          }
+        ],
+        "I": [
+          {
+            "team": "Portugal",
+            "pts": 7,
+            "gd": 3
+          },
+          {
+            "team": "Colombia",
+            "pts": 6,
+            "gd": 2
+          }
+        ],
+        "J": [
+          {
+            "team": "Spain",
+            "pts": 9,
+            "gd": 9
+          },
+          {
+            "team": "Croatia",
+            "pts": 6,
+            "gd": -3
+          },
+          {
+            "team": "Paraguay",
+            "pts": 3,
+            "gd": -1
+          }
+        ],
+        "K": [
+          {
+            "team": "Scotland",
+            "pts": 9,
+            "gd": 6
+          },
+          {
+            "team": "England",
+            "pts": 4,
+            "gd": 3
+          },
+          {
+            "team": "Poland",
+            "pts": 4,
+            "gd": 0
+          }
+        ],
+        "L": [
+          {
+            "team": "Germany",
+            "pts": 9,
+            "gd": 3
+          },
+          {
+            "team": "Belgium",
+            "pts": 6,
+            "gd": 4
+          }
+        ]
+      },
+      "knockouts": {
+        "r32": [
+          {
+            "team1": "Croatia",
+            "team2": "Argentina",
+            "score1": 3,
+            "score2": 4
+          },
+          {
+            "team1": "Tunisia",
+            "team2": "Belgium",
+            "score1": 1,
+            "score2": 4
+          },
+          {
+            "team1": "Jamaica",
+            "team2": "Brazil",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Korea Republic",
+            "team2": "Chile",
+            "score1": 0,
+            "score2": 0
+          },
+          {
+            "team1": "Mexico",
+            "team2": "Colombia",
+            "score1": 1,
+            "score2": 1
+          },
+          {
+            "team1": "Switzerland",
+            "team2": "Costa Rica",
+            "score1": 3,
+            "score2": 0
+          },
+          {
+            "team1": "Italy",
+            "team2": "Denmark",
+            "score1": 2,
+            "score2": 1
+          },
+          {
+            "team1": "Germany",
+            "team2": "Egypt",
+            "score1": 2,
+            "score2": 0
+          },
+          {
+            "team1": "Spain",
+            "team2": "England",
+            "score1": 1,
+            "score2": 2
+          },
+          {
+            "team1": "Saudi Arabia",
+            "team2": "France",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Scotland",
+            "team2": "Iran",
+            "score1": 0,
+            "score2": 2
+          },
+          {
+            "team1": "Morocco",
+            "team2": "Japan",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "United States",
+            "team2": "Japan",
+            "score1": 2,
+            "score2": 1
+          },
+          {
+            "team1": "Nigeria",
+            "team2": "Netherlands",
+            "score1": 1,
+            "score2": 4
+          },
+          {
+            "team1": "Uruguay",
+            "team2": "Paraguay",
+            "score1": 1,
+            "score2": 2
+          },
+          {
+            "team1": "Portugal",
+            "team2": "Poland",
+            "score1": 1,
+            "score2": 0
+          }
+        ],
+        "r16": [
+          {
+            "team1": "Japan",
+            "team2": "Argentina",
+            "score1": 0,
+            "score2": 2
+          },
+          {
+            "team1": "Netherlands",
+            "team2": "Belgium",
+            "score1": 2,
+            "score2": 0
+          },
+          {
+            "team1": "France",
+            "team2": "Brazil",
+            "score1": 3,
+            "score2": 0
+          },
+          {
+            "team1": "Colombia",
+            "team2": "Chile",
+            "score1": 1,
+            "score2": 0
+          },
+          {
+            "team1": "Switzerland",
+            "team2": "England",
+            "score1": 2,
+            "score2": 2
+          },
+          {
+            "team1": "Paraguay",
+            "team2": "Germany",
+            "score1": 0,
+            "score2": 3
+          },
+          {
+            "team1": "Italy",
+            "team2": "Iran",
+            "score1": 1,
+            "score2": 0
+          },
+          {
+            "team1": "United States",
+            "team2": "Portugal",
+            "score1": 1,
+            "score2": 1
+          }
+        ],
+        "qf": [
+          {
+            "team1": "United States",
+            "team2": "Argentina",
+            "score1": 0,
+            "score2": 2
+          },
+          {
+            "team1": "Netherlands",
+            "team2": "Colombia",
+            "score1": 1,
+            "score2": 1
+          },
+          {
+            "team1": "France",
+            "team2": "England",
+            "score1": 2,
+            "score2": 2
+          },
+          {
+            "team1": "Italy",
+            "team2": "Germany",
+            "score1": 1,
+            "score2": 0
+          }
+        ],
+        "sf": [
+          {
+            "team1": "Colombia",
+            "team2": "Argentina",
+            "score1": 2,
+            "score2": 1
+          },
+          {
+            "team1": "Italy",
+            "team2": "England",
+            "score1": 0,
+            "score2": 0
+          }
+        ],
+        "final": [
+          {
+            "team1": "Italy",
+            "team2": "Colombia",
+            "score1": 1,
+            "score2": 1
+          },
+          {
+            "team1": "England",
+            "team2": "Argentina",
+            "score1": 1,
+            "score2": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "groups": {
+        "A": [
+          "United States",
+          "Netherlands",
+          "Morocco",
+          "Saudi Arabia"
+        ],
+        "B": [
+          "Mexico",
+          "Poland",
+          "Australia",
+          "South Africa"
+        ],
+        "C": [
+          "Canada",
+          "Switzerland",
+          "Korea Republic",
+          "New Zealand"
+        ],
+        "D": [
+          "Uruguay",
+          "Austria",
+          "Iran",
+          "Panama"
+        ],
+        "E": [
+          "Argentina",
+          "Croatia",
+          "Japan",
+          "Cameroon"
+        ],
+        "F": [
+          "Brazil",
+          "Wales",
+          "Norway",
+          "Jordan"
+        ],
+        "G": [
+          "Belgium",
+          "Colombia",
+          "Algeria",
+          "Qatar"
+        ],
+        "H": [
+          "Italy",
+          "Tunisia",
+          "Jamaica",
+          "Uzbekistan"
+        ],
+        "I": [
+          "France",
+          "Germany",
+          "Nigeria",
+          "Haiti"
+        ],
+        "J": [
+          "England",
+          "Senegal",
+          "Paraguay",
+          "Costa Rica"
+        ],
+        "K": [
+          "Portugal",
+          "Denmark",
+          "Egypt",
+          "Ecuador"
+        ],
+        "L": [
+          "Spain",
+          "Chile",
+          "Scotland",
+          "Ghana"
+        ]
+      },
+      "standings": {
+        "A": [
+          {
+            "team": "Morocco",
+            "pts": 6,
+            "gd": 1
+          },
+          {
+            "team": "Netherlands",
+            "pts": 5,
+            "gd": 2
+          },
+          {
+            "team": "United States",
+            "pts": 4,
+            "gd": 2
+          }
+        ],
+        "B": [
+          {
+            "team": "Poland",
+            "pts": 5,
+            "gd": 1
+          },
+          {
+            "team": "Australia",
+            "pts": 4,
+            "gd": 0
+          },
+          {
+            "team": "Australia",
+            "pts": 4,
+            "gd": 0
+          }
+        ],
+        "C": [
+          {
+            "team": "Switzerland",
+            "pts": 7,
+            "gd": 4
+          },
+          {
+            "team": "Korea Republic",
+            "pts": 4,
+            "gd": 2
+          }
+        ],
+        "D": [
+          {
+            "team": "Austria",
+            "pts": 9,
+            "gd": 5
+          },
+          {
+            "team": "Uruguay",
+            "pts": 6,
+            "gd": 6
+          }
+        ],
+        "E": [
+          {
+            "team": "Argentina",
+            "pts": 7,
+            "gd": 3
+          },
+          {
+            "team": "Croatia",
+            "pts": 5,
+            "gd": 2
+          },
+          {
+            "team": "Japan",
+            "pts": 4,
+            "gd": 0
+          }
+        ],
+        "F": [
+          {
+            "team": "Brazil",
+            "pts": 9,
+            "gd": 7
+          },
+          {
+            "team": "Norway",
+            "pts": 4,
+            "gd": -1
+          },
+          {
+            "team": "Wales",
+            "pts": 2,
+            "gd": -1
+          }
+        ],
+        "G": [
+          {
+            "team": "Belgium",
+            "pts": 9,
+            "gd": 3
+          },
+          {
+            "team": "Colombia",
+            "pts": 6,
+            "gd": 3
+          },
+          {
+            "team": "Algeria",
+            "pts": 3,
+            "gd": -3
+          }
+        ],
+        "H": [
+          {
+            "team": "Tunisia",
+            "pts": 9,
+            "gd": 4
+          },
+          {
+            "team": "Italy",
+            "pts": 6,
+            "gd": 1
+          }
+        ],
+        "I": [
+          {
+            "team": "Germany",
+            "pts": 9,
+            "gd": 6
+          },
+          {
+            "team": "France",
+            "pts": 4,
+            "gd": 2
+          },
+          {
+            "team": "Nigeria",
+            "pts": 4,
+            "gd": 0
+          }
+        ],
+        "J": [
+          {
+            "team": "England",
+            "pts": 9,
+            "gd": 7
+          },
+          {
+            "team": "Senegal",
+            "pts": 6,
+            "gd": -1
+          },
+          {
+            "team": "Paraguay",
+            "pts": 3,
+            "gd": -3
+          }
+        ],
+        "K": [
+          {
+            "team": "Portugal",
+            "pts": 7,
+            "gd": 3
+          },
+          {
+            "team": "Ecuador",
+            "pts": 4,
+            "gd": 0
+          }
+        ],
+        "L": [
+          {
+            "team": "Spain",
+            "pts": 9,
+            "gd": 10
+          },
+          {
+            "team": "Scotland",
+            "pts": 3,
+            "gd": -2
+          },
+          {
+            "team": "Chile",
+            "pts": 3,
+            "gd": -1
+          }
+        ]
+      },
+      "knockouts": {
+        "r32": [
+          {
+            "team1": "Brazil",
+            "team2": "Algeria",
+            "score1": 2,
+            "score2": 1
+          },
+          {
+            "team1": "United States",
+            "team2": "Argentina",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Morocco",
+            "team2": "Australia",
+            "score1": 2,
+            "score2": 0
+          },
+          {
+            "team1": "Italy",
+            "team2": "Australia",
+            "score1": 0,
+            "score2": 0
+          },
+          {
+            "team1": "Scotland",
+            "team2": "Austria",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Wales",
+            "team2": "Belgium",
+            "score1": 0,
+            "score2": 2
+          },
+          {
+            "team1": "Tunisia",
+            "team2": "Chile",
+            "score1": 2,
+            "score2": 3
+          },
+          {
+            "team1": "Norway",
+            "team2": "Colombia",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Uruguay",
+            "team2": "Croatia",
+            "score1": 4,
+            "score2": 0
+          },
+          {
+            "team1": "Portugal",
+            "team2": "Ecuador",
+            "score1": 2,
+            "score2": 1
+          },
+          {
+            "team1": "France",
+            "team2": "England",
+            "score1": 1,
+            "score2": 1
+          },
+          {
+            "team1": "Paraguay",
+            "team2": "Germany",
+            "score1": 0,
+            "score2": 2
+          },
+          {
+            "team1": "Senegal",
+            "team2": "Japan",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Spain",
+            "team2": "Korea Republic",
+            "score1": 0,
+            "score2": 0
+          },
+          {
+            "team1": "Poland",
+            "team2": "Netherlands",
+            "score1": 4,
+            "score2": 2
+          },
+          {
+            "team1": "Switzerland",
+            "team2": "Nigeria",
+            "score1": 1,
+            "score2": 1
+          }
+        ],
+        "r16": [
+          {
+            "team1": "Korea Republic",
+            "team2": "Argentina",
+            "score1": 0,
+            "score2": 0
+          },
+          {
+            "team1": "Colombia",
+            "team2": "Australia",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Germany",
+            "team2": "Austria",
+            "score1": 2,
+            "score2": 2
+          },
+          {
+            "team1": "Chile",
+            "team2": "Belgium",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "England",
+            "team2": "Brazil",
+            "score1": 3,
+            "score2": 4
+          },
+          {
+            "team1": "Morocco",
+            "team2": "Japan",
+            "score1": 1,
+            "score2": 1
+          },
+          {
+            "team1": "Portugal",
+            "team2": "Nigeria",
+            "score1": 3,
+            "score2": 0
+          },
+          {
+            "team1": "Uruguay",
+            "team2": "Poland",
+            "score1": 2,
+            "score2": 0
+          }
+        ],
+        "qf": [
+          {
+            "team1": "Uruguay",
+            "team2": "Australia",
+            "score1": 2,
+            "score2": 2
+          },
+          {
+            "team1": "Germany",
+            "team2": "Belgium",
+            "score1": 1,
+            "score2": 1
+          },
+          {
+            "team1": "Korea Republic",
+            "team2": "Brazil",
+            "score1": 0,
+            "score2": 2
+          },
+          {
+            "team1": "Portugal",
+            "team2": "Japan",
+            "score1": 2,
+            "score2": 0
+          }
+        ],
+        "sf": [
+          {
+            "team1": "Brazil",
+            "team2": "Belgium",
+            "score1": 4,
+            "score2": 1
+          },
+          {
+            "team1": "Uruguay",
+            "team2": "Portugal",
+            "score1": 1,
+            "score2": 2
+          }
+        ],
+        "final": [
+          {
+            "team1": "Portugal",
+            "team2": "Brazil",
+            "score1": 1,
+            "score2": 4
+          },
+          {
+            "team1": "Uruguay",
+            "team2": "Belgium",
+            "score1": 2,
+            "score2": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "groups": {
+        "A": [
+          "United States",
+          "Germany",
+          "Egypt",
+          "Jordan"
+        ],
+        "B": [
+          "Mexico",
+          "Poland",
+          "Algeria",
+          "Saudi Arabia"
+        ],
+        "C": [
+          "Canada",
+          "Netherlands",
+          "Australia",
+          "Ghana"
+        ],
+        "D": [
+          "Spain",
+          "Colombia",
+          "Norway",
+          "South Africa"
+        ],
+        "E": [
+          "Portugal",
+          "Wales",
+          "Paraguay",
+          "Cameroon"
+        ],
+        "F": [
+          "Brazil",
+          "Croatia",
+          "Scotland",
+          "Panama"
+        ],
+        "G": [
+          "Argentina",
+          "Austria",
+          "Japan",
+          "Haiti"
+        ],
+        "H": [
+          "England",
+          "Chile",
+          "Nigeria",
+          "Qatar"
+        ],
+        "I": [
+          "Uruguay",
+          "Tunisia",
+          "Iran",
+          "Costa Rica"
+        ],
+        "J": [
+          "Belgium",
+          "Denmark",
+          "Morocco",
+          "Uzbekistan"
+        ],
+        "K": [
+          "Italy",
+          "Switzerland",
+          "Jamaica",
+          "New Zealand"
+        ],
+        "L": [
+          "France",
+          "Senegal",
+          "Korea Republic",
+          "Ecuador"
+        ]
+      },
+      "standings": {
+        "A": [
+          {
+            "team": "Germany",
+            "pts": 7,
+            "gd": 4
+          },
+          {
+            "team": "Egypt",
+            "pts": 6,
+            "gd": -1
+          },
+          {
+            "team": "United States",
+            "pts": 4,
+            "gd": 1
+          }
+        ],
+        "B": [
+          {
+            "team": "Mexico",
+            "pts": 9,
+            "gd": 6
+          },
+          {
+            "team": "Poland",
+            "pts": 6,
+            "gd": 0
+          }
+        ],
+        "C": [
+          {
+            "team": "Netherlands",
+            "pts": 9,
+            "gd": 3
+          },
+          {
+            "team": "Australia",
+            "pts": 6,
+            "gd": 5
+          }
+        ],
+        "D": [
+          {
+            "team": "Norway",
+            "pts": 7,
+            "gd": 3
+          },
+          {
+            "team": "Colombia",
+            "pts": 5,
+            "gd": 2
+          },
+          {
+            "team": "Spain",
+            "pts": 3,
+            "gd": 3
+          }
+        ],
+        "E": [
+          {
+            "team": "Portugal",
+            "pts": 7,
+            "gd": 4
+          },
+          {
+            "team": "Paraguay",
+            "pts": 4,
+            "gd": 0
+          },
+          {
+            "team": "Wales",
+            "pts": 3,
+            "gd": 0
+          }
+        ],
+        "F": [
+          {
+            "team": "Brazil",
+            "pts": 9,
+            "gd": 15
+          },
+          {
+            "team": "Croatia",
+            "pts": 3,
+            "gd": -1
+          }
+        ],
+        "G": [
+          {
+            "team": "Argentina",
+            "pts": 7,
+            "gd": 2
+          },
+          {
+            "team": "Austria",
+            "pts": 4,
+            "gd": 1
+          }
+        ],
+        "H": [
+          {
+            "team": "Chile",
+            "pts": 7,
+            "gd": 2
+          },
+          {
+            "team": "Qatar",
+            "pts": 4,
+            "gd": 0
+          },
+          {
+            "team": "England",
+            "pts": 3,
+            "gd": 0
+          }
+        ],
+        "I": [
+          {
+            "team": "Uruguay",
+            "pts": 7,
+            "gd": 3
+          },
+          {
+            "team": "Costa Rica",
+            "pts": 5,
+            "gd": 1
+          },
+          {
+            "team": "Iran",
+            "pts": 4,
+            "gd": -1
+          }
+        ],
+        "J": [
+          {
+            "team": "Belgium",
+            "pts": 7,
+            "gd": 9
+          },
+          {
+            "team": "Denmark",
+            "pts": 5,
+            "gd": 2
+          },
+          {
+            "team": "Uzbekistan",
+            "pts": 4,
+            "gd": -3
+          }
+        ],
+        "K": [
+          {
+            "team": "Jamaica",
+            "pts": 7,
+            "gd": 3
+          },
+          {
+            "team": "Switzerland",
+            "pts": 5,
+            "gd": 1
+          },
+          {
+            "team": "Italy",
+            "pts": 4,
+            "gd": 0
+          }
+        ],
+        "L": [
+          {
+            "team": "France",
+            "pts": 6,
+            "gd": 1
+          },
+          {
+            "team": "Korea Republic",
+            "pts": 4,
+            "gd": 0
+          },
+          {
+            "team": "Senegal",
+            "pts": 4,
+            "gd": 0
+          }
+        ]
+      },
+      "knockouts": {
+        "r32": [
+          {
+            "team1": "Croatia",
+            "team2": "Argentina",
+            "score1": 1,
+            "score2": 4
+          },
+          {
+            "team1": "Colombia",
+            "team2": "Australia",
+            "score1": 2,
+            "score2": 1
+          },
+          {
+            "team1": "Chile",
+            "team2": "Austria",
+            "score1": 0,
+            "score2": 0
+          },
+          {
+            "team1": "Paraguay",
+            "team2": "Belgium",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Wales",
+            "team2": "Brazil",
+            "score1": 2,
+            "score2": 4
+          },
+          {
+            "team1": "Switzerland",
+            "team2": "Costa Rica",
+            "score1": 0,
+            "score2": 0
+          },
+          {
+            "team1": "France",
+            "team2": "Denmark",
+            "score1": 1,
+            "score2": 4
+          },
+          {
+            "team1": "Iran",
+            "team2": "Egypt",
+            "score1": 3,
+            "score2": 1
+          },
+          {
+            "team1": "Mexico",
+            "team2": "England",
+            "score1": 1,
+            "score2": 4
+          },
+          {
+            "team1": "Italy",
+            "team2": "Germany",
+            "score1": 1,
+            "score2": 0
+          },
+          {
+            "team1": "Korea Republic",
+            "team2": "Jamaica",
+            "score1": 3,
+            "score2": 0
+          },
+          {
+            "team1": "Spain",
+            "team2": "Netherlands",
+            "score1": 0,
+            "score2": 0
+          },
+          {
+            "team1": "United States",
+            "team2": "Norway",
+            "score1": 1,
+            "score2": 0
+          },
+          {
+            "team1": "Uzbekistan",
+            "team2": "Poland",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Qatar",
+            "team2": "Portugal",
+            "score1": 1,
+            "score2": 3
+          },
+          {
+            "team1": "Uruguay",
+            "team2": "Senegal",
+            "score1": 1,
+            "score2": 2
+          }
+        ],
+        "r16": [
+          {
+            "team1": "Brazil",
+            "team2": "Argentina",
+            "score1": 0,
+            "score2": 0
+          },
+          {
+            "team1": "United States",
+            "team2": "Austria",
+            "score1": 4,
+            "score2": 4
+          },
+          {
+            "team1": "Iran",
+            "team2": "Belgium",
+            "score1": 1,
+            "score2": 3
+          },
+          {
+            "team1": "Costa Rica",
+            "team2": "Colombia",
+            "score1": 0,
+            "score2": 1
+          },
+          {
+            "team1": "Poland",
+            "team2": "Denmark",
+            "score1": 0,
+            "score2": 2
+          },
+          {
+            "team1": "Netherlands",
+            "team2": "England",
+            "score1": 1,
+            "score2": 2
+          },
+          {
+            "team1": "Portugal",
+            "team2": "Italy",
+            "score1": 1,
+            "score2": 3
+          },
+          {
+            "team1": "Senegal",
+            "team2": "Korea Republic",
+            "score1": 1,
+            "score2": 0
+          }
+        ],
+        "qf": [
+          {
+            "team1": "Italy",
+            "team2": "Belgium",
+            "score1": 1,
+            "score2": 2
+          },
+          {
+            "team1": "England",
+            "team2": "Brazil",
+            "score1": 2,
+            "score2": 1
+          },
+          {
+            "team1": "Denmark",
+            "team2": "Colombia",
+            "score1": 0,
+            "score2": 2
+          },
+          {
+            "team1": "United States",
+            "team2": "Senegal",
+            "score1": 3,
+            "score2": 0
+          }
+        ],
+        "sf": [
+          {
+            "team1": "Colombia",
+            "team2": "Belgium",
+            "score1": 0,
+            "score2": 2
+          },
+          {
+            "team1": "United States",
+            "team2": "England",
+            "score1": 0,
+            "score2": 2
+          }
+        ],
+        "final": [
+          {
+            "team1": "England",
+            "team2": "Belgium",
+            "score1": 1,
+            "score2": 0
+          },
+          {
+            "team1": "United States",
+            "team2": "Colombia",
+            "score1": 1,
+            "score2": 4
+          }
+        ]
+      }
+    }
+  ],
+  "probabilities": [
+    {
+      "team": "Brazil",
+      "prob": 23.0
+    },
+    {
+      "team": "France",
+      "prob": 14.0
+    },
+    {
+      "team": "Italy",
+      "prob": 12.0
+    },
+    {
+      "team": "Belgium",
+      "prob": 12.0
+    },
+    {
+      "team": "Spain",
+      "prob": 6.0
+    },
+    {
+      "team": "Argentina",
+      "prob": 5.0
+    },
+    {
+      "team": "England",
+      "prob": 4.0
+    },
+    {
+      "team": "Uruguay",
+      "prob": 3.0
+    },
+    {
+      "team": "Austria",
+      "prob": 3.0
+    },
+    {
+      "team": "Switzerland",
+      "prob": 3.0
+    },
+    {
+      "team": "Mexico",
+      "prob": 3.0
+    },
+    {
+      "team": "Chile",
+      "prob": 2.0
+    },
+    {
+      "team": "Netherlands",
+      "prob": 2.0
+    },
+    {
+      "team": "Portugal",
+      "prob": 2.0
+    },
+    {
+      "team": "Germany",
+      "prob": 1.0
+    },
+    {
+      "team": "Scotland",
+      "prob": 1.0
+    },
+    {
+      "team": "Denmark",
+      "prob": 1.0
+    },
+    {
+      "team": "Iran",
+      "prob": 1.0
+    },
+    {
+      "team": "Colombia",
+      "prob": 1.0
+    },
+    {
+      "team": "Paraguay",
+      "prob": 1.0
+    }
+  ]
+}
