@@ -41,9 +41,6 @@ const INITIAL_GROUPS: { id: string, teams: Team[] }[] = [
   { id: 'L', teams: [{ name: 'ENG', flag: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBoEpseatdve20p0p7syJ4e-qTOrNaU7Is5Etlsov-jCke_75aIDc-pfDE5_zkrqsMEEsBiJdyUv7u0jwOmzjRa6Vb0PS_lGz-MrCUnolw16K-lftT5i0Za-hF0vBpAKxXbsYE4DWCLM8Nc5nHajZ56U_pEuejsavNEkM4ByeqBJMOm3RYygYWTfB8Lplru91lRz_TU0PiSYRTqSZmT_-JwBF38B4DjDAh9uHMy3DeMyFninYe-urioujcFgWor1lFzYTqrgMBtG0k' }, { name: '---', flag: null }, { name: '---', flag: null }, { name: '---', flag: null }] },
 ];
 
-// Mocked names to show when shuffle stops
-const MOCK_TEAMS = ['SUI', 'SWE', 'CMR', 'POL', 'DEN', 'URU', 'CRO', 'SEN', 'JPN', 'MAR', 'SRB', 'KOR', 'GHA', 'PER', 'IRN', 'WAL', 'AUS', 'CRC', 'TUN', 'KSA', 'QAT', 'ECU', 'CHI', 'COL', 'CIV', 'EGY', 'PAN', 'NGA', 'TUR', 'NZL', 'ALG', 'HON', 'PAR'];
-
 export const Chapter2: React.FC = () => {
   const { activeRun, randomizeRun } = useSimulation();
   const [isShuffling, setIsShuffling] = useState(false);
