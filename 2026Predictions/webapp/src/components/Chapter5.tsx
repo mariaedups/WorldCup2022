@@ -7,11 +7,8 @@ export const Chapter5: React.FC = () => {
   const [isRevealed, setIsRevealed] = useState(false);
   const [animateBars, setAnimateBars] = useState(false);
 
-  // Extract the winner from the final match of the active run to highlight them
-  const finalMatch = activeRun.knockouts.final[0];
-  const actualWinner = finalMatch
-    ? (finalMatch.score1 > finalMatch.score2 ? finalMatch.team1 : finalMatch.team2)
-    : '';
+  // Extract the winner from the probabilities to highlight the most likely overall winner
+  const actualWinner = probabilities.length > 0 ? probabilities[0].team : '';
 
   // Get top 5 probabilities for chart
   const topProbabilities = probabilities.slice(0, 5).map(p => ({
@@ -94,7 +91,7 @@ export const Chapter5: React.FC = () => {
           </h1>
 
           <p className={`mt-12 font-display italic font-light text-2xl md:text-3xl text-text-muted max-w-2xl leading-snug ${isRevealed ? 'animate-rise delay-500' : ''}`}>
-            "Based on this specific sequence of events and group draws, {actualWinner} emerges victorious."
+            "After 1000 simulated timelines, {actualWinner} stands above the rest as the most likely champion of the world."
           </p>
         </div>
       </section>
@@ -111,7 +108,7 @@ export const Chapter5: React.FC = () => {
               <span className="w-3 h-3 rounded-full bg-secondary"></span>
               <span className="font-mono text-xs text-text-muted uppercase">Projected Win %</span>
               <span className="w-3 h-3 rounded-full bg-primary ml-4"></span>
-              <span className="font-mono text-xs text-text-muted uppercase">Actual Winner</span>
+              <span className="font-mono text-xs text-text-muted uppercase">Most Likely Winner</span>
             </div>
           </div>
 
