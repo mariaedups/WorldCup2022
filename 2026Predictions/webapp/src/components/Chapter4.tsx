@@ -1,62 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSimulation } from '../SimulationContext';
+
+const formatTeamName = (name: string) => {
+  return name.length > 3 ? name.substring(0, 3).toUpperCase() : name.toUpperCase();
+};
 
 export const Chapter4: React.FC = () => {
+  const { activeRun } = useSimulation();
   const [simulationStep, setSimulationStep] = useState<number>(0);
-  const [r32Scores, setR32Scores] = useState<number[][]>(Array(16).fill([0,0]));
-  const [r16Scores, setR16Scores] = useState<number[][]>(Array(8).fill([0,0]));
-  const [qfScores, setQfScores] = useState<number[][]>(Array(4).fill([0,0]));
-  const [sfScores, setSfScores] = useState<number[][]>(Array(2).fill([0,0]));
-  const [finalScore, setFinalScore] = useState<number[]>([0,0]);
 
-  const generateScores = (count: number) => {
-    return Array(count).fill(0).map(() => {
-        let s1 = Math.floor(Math.random() * 4);
-        let s2 = Math.floor(Math.random() * 4);
-        if (s1 === s2) { // no ties allowed, force a winner
-            if (Math.random() > 0.5) s1 += 1;
-            else s2 += 1;
-        }
-        return [s1, s2];
+  // Safely extract knockouts from active run
+  const getMatches = (roundKey: 'r32' | 'r16' | 'qf' | 'sf' | 'final', count: number) => {
+    const matches = activeRun.knockouts[roundKey] || [];
+    // Pad with empty matches if missing
+    return Array.from({ length: count }).map((_, i) => {
+      if (matches[i]) return matches[i];
+      return { team1: 'TBD', team2: 'TBD', score1: 0, score2: 0 };
     });
   };
 
+  const r32Matches = getMatches('r32', 16);
+  const r16Matches = getMatches('r16', 8);
+  const qfMatches = getMatches('qf', 4);
+  const sfMatches = getMatches('sf', 2);
+  const finalMatches = getMatches('final', 1);
+
+  // Reset simulation steps when the active run changes
+  useEffect(() => {
+    setSimulationStep(0);
+  }, [activeRun]);
+
   const handleSimulate = () => {
-    if (simulationStep === 0) {
-      setR32Scores(generateScores(16));
-    } else if (simulationStep === 1) {
-      setR16Scores(generateScores(8));
-    } else if (simulationStep === 2) {
-      setQfScores(generateScores(4));
-    } else if (simulationStep === 3) {
-      setSfScores(generateScores(2));
-    } else if (simulationStep === 4) {
-      setFinalScore(generateScores(1)[0]);
-    } else if (simulationStep === 5) {
-      // After final, next click resets
-      setSimulationStep(0);
-      return;
+    if (simulationStep >= 5) {
+      setSimulationStep(0); // Reset
+    } else {
+      setSimulationStep((prev) => prev + 1);
     }
-    setSimulationStep((prev) => prev + 1);
   };
 
-  const R32_MATCHES = [
-    { m1: "USA", s1: "3", m2: "MAR", s2: "1", live: true },
-    { m1: "TBD", s1: "-", m2: "TBD", s2: "-", date: "Jul 02" },
-    { m1: "FRA", s1: "-", m2: "KOR", s2: "-", date: "Jul 02" },
-    { m1: "ESP", s1: "-", m2: "CIV", s2: "-", date: "Jul 02" },
-    { m1: "BRA", s1: "-", m2: "SCO", s2: "-" },
-    { m1: "URU", s1: "-", m2: "JPN", s2: "-" },
-    { m1: "ENG", s1: "-", m2: "MEX", s2: "-" },
-    { m1: "ARG", s1: "-", m2: "AUS", s2: "-" },
-    { m1: "GER", s1: "-", m2: "SEN", s2: "-" },
-    { m1: "NED", s1: "-", m2: "EGY", s2: "-" },
-    { m1: "POR", s1: "-", m2: "CAN", s2: "-" },
-    { m1: "ITA", s1: "-", m2: "GHA", s2: "-" },
-    { m1: "BEL", s1: "-", m2: "SUI", s2: "-" },
-    { m1: "CRO", s1: "-", m2: "COL", s2: "-" },
-    { m1: "DEN", s1: "-", m2: "TUN", s2: "-" },
-    { m1: "MEX", s1: "-", m2: "KSA", s2: "-" }
-  ];
+
 
   return (
     <div className="flex-1 flex flex-col items-center px-4 py-12 bg-background-dark font-sans min-h-screen grid-pattern">
@@ -83,26 +65,27 @@ export const Chapter4: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 px-2">
-            {R32_MATCHES.map((m, idx) => (
+            {r32Matches.map((m, idx) => (
               <div key={idx} className="flex flex-col gap-4">
-                <div className={`bg-surface border border-border-muted p-3 rounded-lg ${simulationStep >= 1 ? 'hover:border-primary/50 group opacity-100' : (m.date ? 'opacity-60' : '')}`}>
+                <div className={`bg-surface border border-border-muted p-3 rounded-lg ${simulationStep >= 1 ? 'hover:border-primary/50 group opacity-100' : 'opacity-60'}`}>
                   <div className="flex justify-between font-mono text-[10px] mb-2 opacity-50 uppercase">
                     <span>Match {String(idx + 1).padStart(2, '0')}</span>
-                    <span>{simulationStep >= 1 ? 'FT' : (m.live ? <span className="animate-flicker-digit">Live</span> : m.date)}</span>
+                    <span>{simulationStep >= 1 ? 'FT' : '---'}</span>
                   </div>
                   <div className="flex items-center justify-between mb-1">
-                    <span className={`font-mono text-xs ${m.m1 === 'TBD' ? 'italic' : ''} ${simulationStep >= 1 && r32Scores[idx][0] > r32Scores[idx][1] ? 'text-primary font-bold' : ''}`}>{m.m1}</span>
-                    <span className={`font-mono ${simulationStep >= 1 ? (r32Scores[idx][0] > r32Scores[idx][1] ? 'text-primary' : 'opacity-50') : 'opacity-50'}`}>{simulationStep >= 1 ? r32Scores[idx][0] : m.s1}</span>
+                    <span className={`font-mono text-xs ${simulationStep >= 1 && m.score1 > m.score2 ? 'text-primary font-bold' : ''}`}>{formatTeamName(m.team1)}</span>
+                    <span className={`font-mono ${simulationStep >= 1 ? (m.score1 > m.score2 ? 'text-primary' : 'opacity-50') : 'opacity-50'}`}>{simulationStep >= 1 ? m.score1 : '-'}</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className={`font-mono text-xs ${m.m2 === 'TBD' ? 'italic' : ''} ${simulationStep >= 1 && r32Scores[idx][1] > r32Scores[idx][0] ? 'text-primary font-bold' : 'opacity-50'}`}>{m.m2}</span>
-                    <span className={`font-mono ${simulationStep >= 1 ? (r32Scores[idx][1] > r32Scores[idx][0] ? 'text-primary' : 'opacity-50') : 'opacity-50'}`}>{simulationStep >= 1 ? r32Scores[idx][1] : m.s2}</span>
+                    <span className={`font-mono text-xs ${simulationStep >= 1 && m.score2 > m.score1 ? 'text-primary font-bold' : 'opacity-50'}`}>{formatTeamName(m.team2)}</span>
+                    <span className={`font-mono ${simulationStep >= 1 ? (m.score2 > m.score1 ? 'text-primary' : 'opacity-50') : 'opacity-50'}`}>{simulationStep >= 1 ? m.score2 : '-'}</span>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-        </section>
+            </div>
+          </section>
+
 
         {/* Downward Flow to Round of 16 */}
         <div className="w-full flex flex-col items-center gap-16 relative">
@@ -131,36 +114,22 @@ export const Chapter4: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-12">
-              <div className={`bg-surface ${simulationStep >= 1 ? 'border-l-2 border-primary glow-primary' : 'border border-border-muted'} p-4 rounded-lg`}>
-                <div className="flex justify-between font-mono text-[10px] mb-2 opacity-50 uppercase"><span>R16 - Match 1</span></div>
-                <div className="flex items-center justify-between mb-1">
-                  <span className={`font-mono text-sm ${simulationStep >= 2 && r16Scores[0][0] > r16Scores[0][1] ? 'text-primary font-bold' : ''}`}>USA</span>
-                  <span className={`font-mono ${simulationStep >= 2 ? (r16Scores[0][0] > r16Scores[0][1] ? 'text-primary' : 'opacity-50') : 'opacity-50'}`}>{simulationStep >= 2 ? r16Scores[0][0] : '-'}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className={`font-mono text-sm ${simulationStep >= 2 && r16Scores[0][1] > r16Scores[0][0] ? 'text-primary font-bold' : 'italic opacity-30'}`}>{simulationStep >= 1 ? 'Winner Match 02' : 'TBD'}</span>
-                  <span className={`font-mono ${simulationStep >= 2 ? (r16Scores[0][1] > r16Scores[0][0] ? 'text-primary' : 'opacity-50') : 'opacity-50'}`}>{simulationStep >= 2 ? r16Scores[0][1] : '-'}</span>
-                </div>
-              </div>
-
-              {['BRA vs ENG', 'GER vs POR', 'ITA vs FRA'].map((match, i) => {
-                const [t1, t2] = match.split(' vs ');
-                return (
-                  <div key={i} className="bg-surface border border-border-muted p-4 rounded-lg">
-                    <div className="flex justify-between font-mono text-[10px] mb-2 opacity-50 uppercase"><span>R16 - Match {i+2}</span></div>
-                    <div className="flex items-center justify-between mb-1">
-                      <span className={`font-mono text-sm ${simulationStep >= 2 && r16Scores[i+1][0] > r16Scores[i+1][1] ? 'text-primary font-bold' : ''}`}>{simulationStep >= 1 ? t1 : 'TBD'}</span>
-                      <span className={`font-mono ${simulationStep >= 2 ? (r16Scores[i+1][0] > r16Scores[i+1][1] ? 'text-primary' : 'opacity-50') : 'opacity-50'}`}>{simulationStep >= 2 ? r16Scores[i+1][0] : '-'}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className={`font-mono text-sm ${simulationStep >= 2 && r16Scores[i+1][1] > r16Scores[i+1][0] ? 'text-primary font-bold' : ''}`}>{simulationStep >= 1 ? t2 : 'TBD'}</span>
-                      <span className={`font-mono ${simulationStep >= 2 ? (r16Scores[i+1][1] > r16Scores[i+1][0] ? 'text-primary' : 'opacity-50') : 'opacity-50'}`}>{simulationStep >= 2 ? r16Scores[i+1][1] : '-'}</span>
-                    </div>
+              {r16Matches.map((m, i) => (
+                <div key={i} className={`bg-surface ${simulationStep >= 2 && m.score1 > m.score2 ? 'border-l-2 border-primary glow-primary' : 'border border-border-muted'} p-4 rounded-lg`}>
+                  <div className="flex justify-between font-mono text-[10px] mb-2 opacity-50 uppercase"><span>R16 - Match {i+1}</span></div>
+                  <div className="flex items-center justify-between mb-1">
+                    <span className={`font-mono text-sm ${simulationStep >= 2 && m.score1 > m.score2 ? 'font-bold text-primary' : ''}`}>{simulationStep >= 1 ? formatTeamName(m.team1) : 'TBD'}</span>
+                    <span className={`font-mono ${simulationStep >= 2 ? (m.score1 > m.score2 ? 'text-primary' : 'opacity-50') : 'opacity-50'}`}>{simulationStep >= 2 ? m.score1 : '-'}</span>
                   </div>
-                )
-              })}
+                  <div className="flex items-center justify-between">
+                    <span className={`font-mono text-sm ${simulationStep >= 2 && m.score2 > m.score1 ? 'font-bold text-primary' : ''}`}>{simulationStep >= 1 ? formatTeamName(m.team2) : 'TBD'}</span>
+                    <span className={`font-mono ${simulationStep >= 2 ? (m.score2 > m.score1 ? 'text-primary' : 'opacity-50') : 'opacity-50'}`}>{simulationStep >= 2 ? m.score2 : '-'}</span>
+                  </div>
+                </div>
+              ))}
             </div>
           </section>
+
 
           {/* Quarter Finals */}
           <section className={`w-full relative z-10 transition-opacity duration-1000 ${simulationStep >= 2 ? 'opacity-100' : 'opacity-30'}`}>
@@ -170,17 +139,17 @@ export const Chapter4: React.FC = () => {
               <div className="h-[1px] w-48 bg-border-muted"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 px-32">
-              {[1, 2].map(i => (
-                <div key={i} className="bg-surface/50 border border-border-muted p-5 rounded-xl border-dashed">
-                  <div className="flex justify-between font-mono text-[10px] mb-4 opacity-50 uppercase"><span>QF - Match {i}</span></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-12">
+              {qfMatches.map((m, idx) => (
+                <div key={idx} className="bg-surface/50 border border-border-muted p-5 rounded-xl border-dashed">
+                  <div className="flex justify-between font-mono text-[10px] mb-4 opacity-50 uppercase"><span>QF - Match {idx+1}</span></div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className={`font-mono text-base ${simulationStep >= 2 ? 'not-italic opacity-100' : 'italic opacity-40'} ${simulationStep >= 3 && qfScores[i-1][0] > qfScores[i-1][1] ? 'text-primary font-bold' : ''}`}>{simulationStep >= 2 ? (i===1 ? 'USA' : 'GER') : 'TBD'}</span>
-                    <span className={`font-mono ${simulationStep >= 3 ? (qfScores[i-1][0] > qfScores[i-1][1] ? 'text-primary' : 'opacity-50') : 'opacity-50'}`}>{simulationStep >= 3 ? qfScores[i-1][0] : '-'}</span>
+                    <span className={`font-mono text-base ${simulationStep >= 2 ? 'not-italic opacity-100' : 'italic opacity-40'} ${simulationStep >= 3 && m.score1 > m.score2 ? 'text-primary font-bold' : ''}`}>{simulationStep >= 2 ? formatTeamName(m.team1) : 'TBD'}</span>
+                    <span className={`font-mono ${simulationStep >= 3 ? (m.score1 > m.score2 ? 'text-primary' : 'opacity-50') : 'opacity-50'}`}>{simulationStep >= 3 ? m.score1 : '-'}</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className={`font-mono text-base ${simulationStep >= 2 ? 'not-italic opacity-100' : 'italic opacity-40'} ${simulationStep >= 3 && qfScores[i-1][1] > qfScores[i-1][0] ? 'text-primary font-bold' : ''}`}>{simulationStep >= 2 ? (i===1 ? 'BRA' : 'FRA') : 'TBD'}</span>
-                    <span className={`font-mono ${simulationStep >= 3 ? (qfScores[i-1][1] > qfScores[i-1][0] ? 'text-primary' : 'opacity-50') : 'opacity-50'}`}>{simulationStep >= 3 ? qfScores[i-1][1] : '-'}</span>
+                    <span className={`font-mono text-base ${simulationStep >= 2 ? 'not-italic opacity-100' : 'italic opacity-40'} ${simulationStep >= 3 && m.score2 > m.score1 ? 'text-primary font-bold' : ''}`}>{simulationStep >= 2 ? formatTeamName(m.team2) : 'TBD'}</span>
+                    <span className={`font-mono ${simulationStep >= 3 ? (m.score2 > m.score1 ? 'text-primary' : 'opacity-50') : 'opacity-50'}`}>{simulationStep >= 3 ? m.score2 : '-'}</span>
                   </div>
                 </div>
               ))}
@@ -196,23 +165,23 @@ export const Chapter4: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap justify-center gap-12 w-full px-12">
-              {[1, 2].map(i => (
-                <div key={i} className="w-full max-w-sm bg-surface/30 border border-border-muted p-6 rounded-2xl flex flex-col gap-3">
-                  <div className="font-mono text-[10px] opacity-50 uppercase text-center mb-2">Semi {i}</div>
+              {sfMatches.map((m, idx) => (
+                <div key={idx} className="w-full max-w-sm bg-surface/30 border border-border-muted p-6 rounded-2xl flex flex-col gap-3">
+                  <div className="font-mono text-[10px] opacity-50 uppercase text-center mb-2">Semi {idx+1}</div>
                   <div className="h-8 w-full bg-border-muted/30 rounded flex items-center justify-between px-4">
-                    <span className={`font-mono text-xs ${simulationStep >= 3 ? 'opacity-100 font-bold' : 'opacity-40 italic font-normal'} ${simulationStep >= 4 && sfScores[i-1][0] > sfScores[i-1][1] ? 'text-primary' : ''}`}>{simulationStep >= 3 ? (i===1 ? 'BRA' : 'FRA') : 'WAITING FOR RESULTS'}</span>
-                    {simulationStep >= 4 && <span className={`font-mono ${sfScores[i-1][0] > sfScores[i-1][1] ? 'text-primary' : 'opacity-50'}`}>{sfScores[i-1][0]}</span>}
+                    <span className={`font-mono text-xs ${simulationStep >= 3 ? 'opacity-100 font-bold' : 'opacity-40 italic font-normal'} ${simulationStep >= 4 && m.score1 > m.score2 ? 'text-primary' : ''}`}>{simulationStep >= 3 ? formatTeamName(m.team1) : 'WAITING FOR RESULTS'}</span>
+                    {simulationStep >= 4 && <span className={`font-mono ${m.score1 > m.score2 ? 'text-primary' : 'opacity-50'}`}>{m.score1}</span>}
                   </div>
                   <div className="h-8 w-full bg-border-muted/30 rounded flex items-center justify-between px-4">
-                    <span className={`font-mono text-xs ${simulationStep >= 3 ? 'opacity-100 font-bold' : 'opacity-40 italic font-normal'} ${simulationStep >= 4 && sfScores[i-1][1] > sfScores[i-1][0] ? 'text-primary' : ''}`}>{simulationStep >= 3 ? (i===1 ? 'ARG' : 'ENG') : 'WAITING FOR RESULTS'}</span>
-                    {simulationStep >= 4 && <span className={`font-mono ${sfScores[i-1][1] > sfScores[i-1][0] ? 'text-primary' : 'opacity-50'}`}>{sfScores[i-1][1]}</span>}
+                    <span className={`font-mono text-xs ${simulationStep >= 3 ? 'opacity-100 font-bold' : 'opacity-40 italic font-normal'} ${simulationStep >= 4 && m.score2 > m.score1 ? 'text-primary' : ''}`}>{simulationStep >= 3 ? formatTeamName(m.team2) : 'WAITING FOR RESULTS'}</span>
+                    {simulationStep >= 4 && <span className={`font-mono ${m.score2 > m.score1 ? 'text-primary' : 'opacity-50'}`}>{m.score2}</span>}
                   </div>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* Final */}
+                    {/* Final */}
           <section className={`w-full flex flex-col items-center pt-8 pb-12 relative z-10 transition-opacity duration-1000 ${simulationStep >= 4 ? 'opacity-100' : 'opacity-30'}`}>
             <div className="absolute inset-0 bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
             <div className="flex items-center justify-center gap-4 mb-12">
@@ -227,19 +196,19 @@ export const Chapter4: React.FC = () => {
               </div>
               <div className="flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
                 <div className="flex flex-col items-center gap-4 group cursor-pointer">
-                  <div className={`h-24 w-24 rounded-full bg-border-muted border-2 border-dashed border-slate-700 flex items-center justify-center transition-colors ${simulationStep >= 5 && finalScore[0] > finalScore[1] ? 'border-primary glow-primary' : 'group-hover:border-primary'}`}>
+                  <div className={`h-24 w-24 rounded-full bg-border-muted border-2 border-dashed border-slate-700 flex items-center justify-center transition-colors ${simulationStep >= 5 && finalMatches[0].score1 > finalMatches[0].score2 ? 'border-primary glow-primary' : 'group-hover:border-primary'}`}>
                     <span className={`material-symbols-outlined text-4xl transition-all ${simulationStep >= 4 ? 'hidden' : 'opacity-20 group-hover:opacity-100 group-hover:text-primary'}`}>question_mark</span>
-                    {simulationStep >= 4 && <span className={`font-display text-4xl font-bold ${simulationStep >= 5 && finalScore[0] > finalScore[1] ? 'text-primary' : 'text-white'}`}>{simulationStep >= 4 ? 'BRA' : ''}</span>}
+                    {simulationStep >= 4 && <span className={`font-display text-4xl font-bold ${simulationStep >= 5 && finalMatches[0].score1 > finalMatches[0].score2 ? 'text-primary' : 'text-white'}`}>{simulationStep >= 4 ? formatTeamName(finalMatches[0].team1) : ''}</span>}
                   </div>
-                  <span className={`font-display text-2xl font-bold tracking-tight italic ${simulationStep >= 4 ? 'opacity-100' : 'opacity-40 group-hover:opacity-100'} ${simulationStep >= 5 && finalScore[0] > finalScore[1] ? 'text-primary' : ''}`}>{simulationStep >= 4 ? 'BRA' : 'Finalist A'}</span>
+                  <span className={`font-display text-2xl font-bold tracking-tight italic ${simulationStep >= 4 ? 'opacity-100' : 'opacity-40 group-hover:opacity-100'} ${simulationStep >= 5 && finalMatches[0].score1 > finalMatches[0].score2 ? 'text-primary' : ''}`}>{simulationStep >= 4 ? formatTeamName(finalMatches[0].team1) : 'Finalist A'}</span>
                 </div>
 
                 <div className="flex flex-col items-center min-w-[120px]">
                   {simulationStep >= 5 ? (
                     <div className="flex items-center gap-4">
-                      <div className={`font-mono text-6xl font-black italic ${finalScore[0] > finalScore[1] ? 'text-primary' : 'text-white'}`}>{finalScore[0]}</div>
+                      <div className={`font-mono text-6xl font-black italic ${finalMatches[0].score1 > finalMatches[0].score2 ? 'text-primary' : 'text-white'}`}>{finalMatches[0].score1}</div>
                       <div className="font-mono text-3xl font-black text-slate-500">-</div>
-                      <div className={`font-mono text-6xl font-black italic ${finalScore[1] > finalScore[0] ? 'text-primary' : 'text-white'}`}>{finalScore[1]}</div>
+                      <div className={`font-mono text-6xl font-black italic ${finalMatches[0].score2 > finalMatches[0].score1 ? 'text-primary' : 'text-white'}`}>{finalMatches[0].score2}</div>
                     </div>
                   ) : (
                     <div className="font-mono text-5xl font-black text-primary mb-2 italic">VS</div>
@@ -249,11 +218,11 @@ export const Chapter4: React.FC = () => {
                 </div>
 
                 <div className="flex flex-col items-center gap-4 group cursor-pointer">
-                  <div className={`h-24 w-24 rounded-full bg-border-muted border-2 border-dashed border-slate-700 flex items-center justify-center transition-colors ${simulationStep >= 5 && finalScore[1] > finalScore[0] ? 'border-primary glow-primary' : 'group-hover:border-primary'}`}>
+                  <div className={`h-24 w-24 rounded-full bg-border-muted border-2 border-dashed border-slate-700 flex items-center justify-center transition-colors ${simulationStep >= 5 && finalMatches[0].score2 > finalMatches[0].score1 ? 'border-primary glow-primary' : 'group-hover:border-primary'}`}>
                     <span className={`material-symbols-outlined text-4xl transition-all ${simulationStep >= 4 ? 'hidden' : 'opacity-20 group-hover:opacity-100 group-hover:text-primary'}`}>question_mark</span>
-                    {simulationStep >= 4 && <span className={`font-display text-4xl font-bold ${simulationStep >= 5 && finalScore[1] > finalScore[0] ? 'text-primary' : 'text-white'}`}>{simulationStep >= 4 ? 'FRA' : ''}</span>}
+                    {simulationStep >= 4 && <span className={`font-display text-4xl font-bold ${simulationStep >= 5 && finalMatches[0].score2 > finalMatches[0].score1 ? 'text-primary' : 'text-white'}`}>{simulationStep >= 4 ? formatTeamName(finalMatches[0].team2) : ''}</span>}
                   </div>
-                  <span className={`font-display text-2xl font-bold tracking-tight italic ${simulationStep >= 4 ? 'opacity-100' : 'opacity-40 group-hover:opacity-100'} ${simulationStep >= 5 && finalScore[1] > finalScore[0] ? 'text-primary' : ''}`}>{simulationStep >= 4 ? 'FRA' : 'Finalist B'}</span>
+                  <span className={`font-display text-2xl font-bold tracking-tight italic ${simulationStep >= 4 ? 'opacity-100' : 'opacity-40 group-hover:opacity-100'} ${simulationStep >= 5 && finalMatches[0].score2 > finalMatches[0].score1 ? 'text-primary' : ''}`}>{simulationStep >= 4 ? formatTeamName(finalMatches[0].team2) : 'Finalist B'}</span>
                 </div>
               </div>
             </div>

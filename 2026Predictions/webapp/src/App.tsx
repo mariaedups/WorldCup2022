@@ -6,6 +6,7 @@ import { Chapter2 } from './components/Chapter2';
 import { Chapter3 } from './components/Chapter3';
 import { Chapter4 } from './components/Chapter4';
 import { Chapter5 } from './components/Chapter5';
+import { SimulationProvider } from './SimulationContext';
 
 const App: React.FC = () => {
   const [activeChapter, setActiveChapter] = useState<number>(1);
@@ -26,25 +27,27 @@ const App: React.FC = () => {
   }, [inView1, inView2, inView3, inView4, inView5]);
 
   return (
-    <Layout activeChapter={activeChapter}>
-      <main className="w-full">
-        <div id="chapter-1" ref={ref1}>
-          <Chapter1 />
-        </div>
-        <div id="chapter-2" ref={ref2}>
-          <Chapter2 />
-        </div>
-        <div id="chapter-3" ref={ref3}>
-          <Chapter3 />
-        </div>
-        <div id="chapter-4" ref={ref4}>
-          <Chapter4 />
-        </div>
-        <div id="chapter-5" ref={ref5}>
-          <Chapter5 />
-        </div>
-      </main>
-    </Layout>
+    <SimulationProvider>
+      <Layout activeChapter={activeChapter}>
+        <main className="w-full">
+          <div id="chapter-1" ref={ref1}>
+            <Chapter1 />
+          </div>
+          <div id="chapter-2" ref={ref2}>
+            <Chapter2 />
+          </div>
+          <div id="chapter-3" ref={ref3}>
+            <Chapter3 />
+          </div>
+          <div id="chapter-4" ref={ref4}>
+            <Chapter4 />
+          </div>
+          <div id="chapter-5" ref={ref5}>
+            <Chapter5 />
+          </div>
+        </main>
+      </Layout>
+    </SimulationProvider>
   );
 };
 

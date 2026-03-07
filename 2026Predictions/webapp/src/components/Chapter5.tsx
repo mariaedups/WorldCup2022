@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-
-const PROBABILITIES = [
-  { team: 'France', prob: 18.4, actual: true, color: 'bg-primary/90' },
-  { team: 'Brazil', prob: 14.2, actual: false, color: 'bg-secondary/80' },
-  { team: 'England', prob: 12.1, actual: false, color: 'bg-secondary/80' },
-  { team: 'Argentina', prob: 9.8, actual: false, color: 'bg-secondary/80' },
-  { team: 'Spain', prob: 8.5, actual: false, color: 'bg-secondary/60' }
-];
+import { useSimulation } from '../SimulationContext';
 
 export const Chapter5: React.FC = () => {
+  const { probabilities, activeRun } = useSimulation();
   const [isRevealed, setIsRevealed] = useState(false);
   const [animateBars, setAnimateBars] = useState(false);
+
+  // Extract the winner from the probabilities to highlight the most likely overall winner
+  const actualWinner = probabilities.length > 0 ? probabilities[0].team : '';
+
+  // Get top 5 probabilities for chart
+  const topProbabilities = probabilities.slice(0, 5).map(p => ({
+    ...p,
+    actual: p.team === actualWinner,
+    color: p.team === actualWinner ? 'bg-primary/90' : 'bg-secondary/80'
+  }));
+
 
   // Hook to detect when analysis section is in view to trigger bar animations
   const { ref: chartRef, inView: chartInView } = useInView({
@@ -82,22 +87,11 @@ export const Chapter5: React.FC = () => {
           </div>
 
           <h1 className={`font-display font-bold text-6xl md:text-8xl lg:text-9xl text-primary tracking-tight leading-none text-glow uppercase ${isRevealed ? 'animate-rise delay-300' : ''}`}>
-            France
+            {actualWinner}
           </h1>
 
-          <div className={`mt-12 mb-8 relative group ${isRevealed ? 'animate-rise delay-300' : ''}`}>
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
-            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full bg-surface border border-[#2A2E36] flex items-center justify-center shadow-2xl overflow-hidden">
-              <div aria-hidden="true" className="w-full h-full flex flex-col relative">
-                <div className="h-full w-1/3 bg-[#0055A4] absolute left-0"></div>
-                <div className="h-full w-1/3 bg-white absolute left-1/3"></div>
-                <div className="h-full w-1/3 bg-[#EF4135] absolute right-0"></div>
-              </div>
-            </div>
-          </div>
-
-          <p className={`font-display italic font-light text-2xl md:text-3xl text-text-muted max-w-2xl leading-snug ${isRevealed ? 'animate-rise delay-500' : ''}`}>
-            "A tactical masterclass secured their second consecutive title in a thriller against Brazil."
+          <p className={`mt-12 font-display italic font-light text-2xl md:text-3xl text-text-muted max-w-2xl leading-snug ${isRevealed ? 'animate-rise delay-500' : ''}`}>
+            "After 1000 simulated timelines, {actualWinner} stands above the rest as the most likely champion of the world."
           </p>
         </div>
       </section>
@@ -114,12 +108,12 @@ export const Chapter5: React.FC = () => {
               <span className="w-3 h-3 rounded-full bg-secondary"></span>
               <span className="font-mono text-xs text-text-muted uppercase">Projected Win %</span>
               <span className="w-3 h-3 rounded-full bg-primary ml-4"></span>
-              <span className="font-mono text-xs text-text-muted uppercase">Actual Winner</span>
+              <span className="font-mono text-xs text-text-muted uppercase">Most Likely Winner</span>
             </div>
           </div>
 
           <div className="space-y-3 font-mono text-sm" id="chart-container">
-            {PROBABILITIES.map((item, idx) => (
+            {topProbabilities.map((item, idx) => (
               <div key={idx} className="group relative flex items-center gap-4 py-1">
                 <div className={`w-24 md:w-32 text-right font-body text-lg ${item.actual ? 'text-primary font-bold' : 'text-text-muted'}`}>
                   {item.team}
